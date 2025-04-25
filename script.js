@@ -1,4 +1,13 @@
-﻿document.addEventListener('DOMContentLoaded', function() {
+﻿function loadLanguageScript() {
+    const script = document.createElement('script');
+    script.src = 'languages.js';
+    script.async = true;
+    document.body.appendChild(script);
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    loadLanguageScript();
+
     // Mobile Menu Toggle
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const navMenu = document.querySelector('.nav-menu');

@@ -102,7 +102,17 @@ ul {
     background-color: var(--primary-color);
     color: white;
 }
+.language-btn {
+    padding: 12px 15px;
+    font-weight: 700;
+    min-width: 50px;
+}
 
+.cta-buttons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
 .btn-primary:hover {
     background-color: var(--primary-dark);
     color: white;
