@@ -1,19 +1,60 @@
 ﻿function loadLanguageScript() {
-    const script = document.createElement('script');
-    script.src = 'languages.js';
-    script.async = true;
-    document.body.appendChild(script);
+    return new Promise((resolve, reject) => {
+        const script = document.createElement('script');
+        script.src = 'languages.js';
+        script.async = true;
+        script.onload = () => {
+            console.log('Archivo de idiomas cargado correctamente');
+            resolve();
+        };
+        script.onerror = () => {
+            console.error('Error al cargar el archivo de idiomas');
+            reject();
+        };
+        document.body.appendChild(script);
+    });
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    loadLanguageScript();
+document.addEventListener('DOMContentLoaded', async function () {
+    try {
+        await loadLanguageScript();
+        // Solo ejecutar la inicialización del idioma después de cargar el script
+        if (typeof addTranslationAttributes === 'function' && typeof updateContent === 'function') {
+            // Detectar idioma guardado o establecer español por defecto
+            let currentLang = localStorage.getItem('language') || 'es';
+
+            // Inicializar botón de idioma
+            const languageToggle = document.getElementById('language-toggle');
+            if (languageToggle) {
+                languageToggle.textContent = currentLang === 'es' ? 'EN' : 'ES';
+
+                // Agregar evento para cambiar idioma
+                languageToggle.addEventListener('click', function () {
+                    const newLang = localStorage.getItem('language') === 'en' ? 'es' : 'en';
+                    changeLanguage(newLang);
+                });
+            }
+
+            // Añadir atributos data-i18n a los elementos que necesitan traducción
+            addTranslationAttributes();
+
+            // Actualizar contenido inicial
+            updateContent(currentLang);
+
+            console.log('Inicialización de idioma completada');
+        } else {
+            console.error('Las funciones de traducción no están disponibles');
+        }
+    } catch (error) {
+        console.error('Error en la inicialización de idiomas:', error);
+    }
 
     // Mobile Menu Toggle
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const navMenu = document.querySelector('.nav-menu');
 
     if (mobileMenuBtn) {
-        mobileMenuBtn.addEventListener('click', function() {
+        mobileMenuBtn.addEventListener('click', function () {
             navMenu.classList.toggle('active');
 
             // Change hamburger to X
@@ -31,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Close mobile menu when clicking outside
-    document.addEventListener('click', function(event) {
+    document.addEventListener('click', function (event) {
         if (navMenu.classList.contains('active') &&
             !event.target.closest('.nav-menu') &&
             !event.target.closest('.mobile-menu-btn')) {
@@ -49,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const tabContents = document.querySelectorAll('.tab-content');
 
     tabBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
+        btn.addEventListener('click', function () {
             const target = this.dataset.target;
 
             // Remove active class from all buttons and contents
@@ -80,7 +121,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (dots.length > 0) {
         dots.forEach(dot => {
-            dot.addEventListener('click', function() {
+            dot.addEventListener('click', function () {
                 const index = parseInt(this.dataset.index);
                 showTestimonial(index);
             });
@@ -88,7 +129,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     if (prevBtn) {
-        prevBtn.addEventListener('click', function() {
+        prevBtn.addEventListener('click', function () {
             let newIndex = currentIndex - 1;
             if (newIndex < 0) newIndex = testimonials.length - 1;
             showTestimonial(newIndex);
@@ -96,7 +137,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     if (nextBtn) {
-        nextBtn.addEventListener('click', function() {
+        nextBtn.addEventListener('click', function () {
             let newIndex = currentIndex + 1;
             if (newIndex >= testimonials.length) newIndex = 0;
             showTestimonial(newIndex);
@@ -104,7 +145,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Auto rotate testimonials
-    setInterval(function() {
+    setInterval(function () {
         if (testimonials.length > 1) {
             let newIndex = currentIndex + 1;
             if (newIndex >= testimonials.length) newIndex = 0;
@@ -117,7 +158,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const formSuccess = document.getElementById('form-success');
 
     if (demoForm) {
-        demoForm.addEventListener('submit', function(e) {
+        demoForm.addEventListener('submit', function (e) {
             e.preventDefault();
 
             // Simple validation
@@ -170,7 +211,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const backToTopBtn = document.getElementById('back-to-top');
 
     if (backToTopBtn) {
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             if (window.pageYOffset > 300) {
                 backToTopBtn.classList.add('visible');
             } else {
@@ -178,7 +219,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
-        backToTopBtn.addEventListener('click', function() {
+        backToTopBtn.addEventListener('click', function () {
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
@@ -196,13 +237,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (!cookieChoice && cookieConsent) {
         // Show cookie consent after 2 seconds
-        setTimeout(function() {
+        setTimeout(function () {
             cookieConsent.style.display = 'block';
         }, 2000);
 
         // Handle accept
         if (cookieAccept) {
-            cookieAccept.addEventListener('click', function() {
+            cookieAccept.addEventListener('click', function () {
                 localStorage.setItem('cookieChoice', 'accepted');
                 cookieConsent.style.display = 'none';
             });
@@ -210,7 +251,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Handle decline
         if (cookieDecline) {
-            cookieDecline.addEventListener('click', function() {
+            cookieDecline.addEventListener('click', function () {
                 localStorage.setItem('cookieChoice', 'declined');
                 cookieConsent.style.display = 'none';
             });
@@ -219,7 +260,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
+        anchor.addEventListener('click', function (e) {
             const href = this.getAttribute('href');
 
             if (href !== '#') {

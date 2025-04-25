@@ -25,6 +25,21 @@ const translations = {
         'proveedores': 'Proveedores de Equipos',
         'proveedores_desc': 'Empresas que venden y dan mantenimiento a equipos de refrigeración comercial e industrial.',
 
+        // Funcionalidades Section
+        'funcionalidades_title': 'Funcionalidades Clave',
+        'monitoreo_title': 'Monitoreo en Tiempo Real',
+        'monitoreo_desc': 'Seguimiento de temperatura, consumo energético y tiempo de uso de tus equipos.',
+        'reportes_title': 'Reportes Técnicos',
+        'reportes_desc': 'Generación automática de informes detallados sobre el estado de tus equipos.',
+        'alertas_title': 'Alertas Automatizadas',
+        'alertas_desc': 'Notificaciones inmediatas ante fallas o comportamientos anómalos.',
+        'historial_title': 'Historial de Rendimiento',
+        'historial_desc': 'Registro completo del funcionamiento histórico de cada equipo.',
+        'mantenimiento_title': 'Mantenimiento Programado',
+        'mantenimiento_desc': 'Planificación inteligente de mantenimientos preventivos.',
+        'conexion_title': 'Conexión con Técnicos',
+        'conexion_desc': 'Acceso directo a profesionales especializados en tu zona.',
+
         // Beneficios Section
         'beneficios_title': 'Beneficios',
         'para_negocios': 'Para Negocios',
@@ -39,6 +54,13 @@ const translations = {
         'beneficio3_tecnicos': 'Generación automática de reportes',
         'beneficio4_tecnicos': 'Planificación eficiente de visitas técnicas',
         'beneficio5_tecnicos': 'Nuevas oportunidades de negocio',
+
+        // Nosotros Section
+        'nosotros_title': 'Sobre OsitoPolar',
+        'mision_title': 'Misión',
+        'mision_desc': 'Proporcionar una solución tecnológica inteligente que permita a los negocios proteger su inventario y optimizar la gestión de sus equipos de refrigeración, ofreciendo al mismo tiempo herramientas especializadas para mejorar la eficiencia operativa de los técnicos y proveedores del sector.',
+        'vision_title': 'Visión',
+        'vision_desc': 'Ser la empresa líder en gestión y mantenimiento de equipos de refrigeración, empezando por Lima y prontamente expandirnos a más lugares del Perú.',
 
         // Cómo funciona Section
         'como_funciona_title': '¿Cómo Funciona?',
@@ -96,6 +118,7 @@ const translations = {
         'mas_info': 'Más información',
         'aceptar': 'Aceptar',
         'rechazar': 'Rechazar',
+        'volver_arriba': 'Volver arriba',
 
         // Errores formulario
         'error_nombre': 'Por favor, ingresa tu nombre',
@@ -128,6 +151,21 @@ const translations = {
         'proveedores': 'Equipment Suppliers',
         'proveedores_desc': 'Companies that sell and maintain commercial and industrial refrigeration equipment.',
 
+        // Funcionalidades Section
+        'funcionalidades_title': 'Key Features',
+        'monitoreo_title': 'Real-Time Monitoring',
+        'monitoreo_desc': 'Track temperature, energy consumption and usage time of your equipment.',
+        'reportes_title': 'Technical Reports',
+        'reportes_desc': 'Automatic generation of detailed reports on the status of your equipment.',
+        'alertas_title': 'Automated Alerts',
+        'alertas_desc': 'Immediate notifications of failures or abnormal behavior.',
+        'historial_title': 'Performance History',
+        'historial_desc': 'Complete record of the historical operation of each equipment.',
+        'mantenimiento_title': 'Scheduled Maintenance',
+        'mantenimiento_desc': 'Intelligent planning of preventive maintenance.',
+        'conexion_title': 'Connection with Technicians',
+        'conexion_desc': 'Direct access to specialized professionals in your area.',
+
         // Beneficios Section
         'beneficios_title': 'Benefits',
         'para_negocios': 'For Businesses',
@@ -142,6 +180,13 @@ const translations = {
         'beneficio3_tecnicos': 'Automatic report generation',
         'beneficio4_tecnicos': 'Efficient scheduling of technical visits',
         'beneficio5_tecnicos': 'New business opportunities',
+
+        // Nosotros Section
+        'nosotros_title': 'About OsitoPolar',
+        'mision_title': 'Mission',
+        'mision_desc': 'To provide an intelligent technological solution that allows businesses to protect their inventory and optimize the management of their refrigeration equipment, while offering specialized tools to improve the operational efficiency of technicians and suppliers in the sector.',
+        'vision_title': 'Vision',
+        'vision_desc': 'To be the leading company in refrigeration equipment management and maintenance, starting in Lima and soon expanding to more locations in Peru.',
 
         // Cómo funciona Section
         'como_funciona_title': 'How Does It Work?',
@@ -199,6 +244,7 @@ const translations = {
         'mas_info': 'More information',
         'aceptar': 'Accept',
         'rechazar': 'Decline',
+        'volver_arriba': 'Back to top',
 
         // Errores formulario
         'error_nombre': 'Please enter your name',
@@ -294,30 +340,6 @@ function updateContent(lang) {
     }
 }
 
-// Inicializar idioma al cargar la página
-document.addEventListener('DOMContentLoaded', function() {
-    // Detectar idioma guardado o establecer español por defecto
-    let currentLang = localStorage.getItem('language') || 'es';
-
-    // Inicializar botón de idioma
-    const languageToggle = document.getElementById('language-toggle');
-    if (languageToggle) {
-        languageToggle.textContent = currentLang === 'es' ? 'EN' : 'ES';
-
-        // Agregar evento para cambiar idioma
-        languageToggle.addEventListener('click', function() {
-            const newLang = localStorage.getItem('language') === 'en' ? 'es' : 'en';
-            changeLanguage(newLang);
-        });
-    }
-
-    // Añadir atributos data-i18n a los elementos que necesitan traducción
-    addTranslationAttributes();
-
-    // Actualizar contenido inicial
-    updateContent(currentLang);
-});
-
 // Función para agregar atributos data-i18n dinámicamente
 function addTranslationAttributes() {
     // Navegación
@@ -345,6 +367,10 @@ function addTranslationAttributes() {
             btn.setAttribute('data-i18n', 'demo_gratis');
         } else if (text === '¿Cómo funciona?') {
             btn.setAttribute('data-i18n', 'como_funciona');
+        } else if (text === 'Aceptar') {
+            btn.setAttribute('data-i18n', 'aceptar');
+        } else if (text === 'Rechazar') {
+            btn.setAttribute('data-i18n', 'rechazar');
         }
     });
 
@@ -379,6 +405,33 @@ function addTranslationAttributes() {
             const description = title.nextElementSibling;
             if (description && description.tagName === 'P') {
                 description.setAttribute('data-i18n', cardTitles[text] + '_desc');
+            }
+        }
+    });
+
+    // Funcionalidades section
+    const funcionalidadesTitle = document.querySelector('#funcionalidades .section-title');
+    if (funcionalidadesTitle) funcionalidadesTitle.setAttribute('data-i18n', 'funcionalidades_title');
+
+    // Features
+    const featureTitles = {
+        'Monitoreo en Tiempo Real': 'monitoreo_title',
+        'Reportes Técnicos': 'reportes_title',
+        'Alertas Automatizadas': 'alertas_title',
+        'Historial de Rendimiento': 'historial_title',
+        'Mantenimiento Programado': 'mantenimiento_title',
+        'Conexión con Técnicos': 'conexion_title'
+    };
+
+    document.querySelectorAll('.feature h3').forEach(title => {
+        const text = title.textContent.trim();
+        if (featureTitles[text]) {
+            title.setAttribute('data-i18n', featureTitles[text]);
+
+            // También el párrafo correspondiente
+            const description = title.nextElementSibling;
+            if (description && description.tagName === 'P') {
+                description.setAttribute('data-i18n', featureTitles[text].replace('_title', '_desc'));
             }
         }
     });
@@ -425,6 +478,23 @@ function addTranslationAttributes() {
             item.setAttribute('data-i18n', beneficiosTecnicos[index]);
         }
     });
+
+    // Nosotros section
+    const nosotrosTitle = document.querySelector('#nosotros .section-title');
+    if (nosotrosTitle) nosotrosTitle.setAttribute('data-i18n', 'nosotros_title');
+
+    // Misión y Visión
+    const misionTitle = document.querySelector('.mission h3');
+    if (misionTitle) misionTitle.setAttribute('data-i18n', 'mision_title');
+
+    const misionDesc = document.querySelector('.mission p');
+    if (misionDesc) misionDesc.setAttribute('data-i18n', 'mision_desc');
+
+    const visionTitle = document.querySelector('.vision h3');
+    if (visionTitle) visionTitle.setAttribute('data-i18n', 'vision_title');
+
+    const visionDesc = document.querySelector('.vision p');
+    if (visionDesc) visionDesc.setAttribute('data-i18n', 'vision_desc');
 
     // Cómo funciona section
     const comoFuncionaTitle = document.querySelector('#como-funciona .section-title');
@@ -525,6 +595,12 @@ function addTranslationAttributes() {
             link.setAttribute('data-i18n', footerLinks[text]);
         }
     });
+
+    // Back to top button
+    const backToTopBtn = document.getElementById('back-to-top');
+    if (backToTopBtn) {
+        backToTopBtn.setAttribute('data-i18n-attr', 'aria-label:volver_arriba');
+    }
 
     // Copyright
     const copyright = document.querySelector('.footer-bottom p');
