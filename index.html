@@ -1,454 +1,468 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OsitoPolar | Gestión Inteligente de Equipos de Refrigeración</title>
+    <title>OsitoPolar | Smart Management of Refrigeration Equipment</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <meta name="description" content="OsitoPolar - Solución integral para la gestión y mantenimiento de equipos de refrigeración para negocios y técnicos especializados.">
+    <meta name="description"
+          content="OsitoPolar - Solución integral para la gestión y mantenimiento de equipos de refrigeración para negocios y técnicos especializados.">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="logo">
-                <img src="logo.png" alt="OsitoPolar Logo" id="logo">
-                <h1>OsitoPolar</h1>
-            </div>
-            <nav>
-                <button class="mobile-menu-btn" aria-label="Abrir menú">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <ul class="nav-menu">
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#funcionalidades">Funcionalidades</a></li>
-                    <li><a href="#beneficios">Beneficios</a></li>
-                    <li><a href="#nosotros">Nosotros</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-            </nav>
-            <div class="cta-buttons">
-                <a href="#demo" class="btn btn-secondary">Solicitar Demo</a>
-                <button id="language-toggle" class="btn btn-outline language-btn">EN</button>
+<!-- Header -->
+<header>
+    <div class="container">
+        <div class="logo">
+            <img src="logo.png" alt="OsitoPolar Logo" id="logo">
+            <h1>OsitoPolar</h1>
+        </div>
+        <nav>
+            <button class="mobile-menu-btn" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#start">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#about-us">About us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="cta-buttons">
+            <a href="#demo" class="btn btn-secondary">Request Demo</a>
+            <button id="language-toggle" class="btn btn-outline language-btn">EN</button>
+        </div>
+    </div>
+</header>
+<!-- Hero Section -->
+<section id="start" class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h2>Intelligent Management of Refrigeration Equipment</h2>
+            <p>We connect businesses with specialized technicians for preventive and automated maintenance of freezing
+                systems.</p>
+            <div class="hero-cta">
+                <a href="#demo" class="btn btn-primary btn-large">Request Free Demo</a>
+                <a href="#como-funciona" class="btn btn-outline">How does it work?</a>
             </div>
         </div>
-    </header>
-    <!-- Hero Section -->
-    <section id="inicio" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h2>Gestión Inteligente de Equipos de Refrigeración</h2>
-                <p>Conectamos negocios con técnicos especializados para un mantenimiento preventivo y automatizado de sistemas de congelación.</p>
-                <div class="hero-cta">
-                    <a href="#demo" class="btn btn-primary btn-large">Solicitar Demo Gratis</a>
-                    <a href="#como-funciona" class="btn btn-outline">¿Cómo funciona?</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <img src="./assets/images/FigmaAddon-01010.png" alt="Dashboard de OsitoPolar mostrando monitoreo de temperatura en tiempo real">
-            </div>
+        <div class="hero-image">
+            <img src="./assets/images/FigmaAddon-01010.png"
+                 alt="Dashboard de OsitoPolar mostrando monitoreo de temperatura en tiempo real">
         </div>
-        <div class="hero-clients">
-            <div class="container">
-                <p>Confían en nosotros:</p>
-                <div class="client-logos">
-                    <img src="./assets/images/Metro_logo_con_fondo_2013_1.webp" alt="Logo cliente 1">
-                    <img src="./assets/images/D%2527onofrio_2014.webp" alt="Logo cliente 2">
-                    <img src="./assets/images/unnamed.png" alt="Logo cliente 3">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Para quién es Section -->
-    <section id="para-quien" class="para-quien">
+    </div>
+    <div class="hero-clients">
         <div class="container">
-            <h2 class="section-title">¿Para quién es OsitoPolar?</h2>
-            <div class="audience-cards">
-                <div class="card">
-                    <div class="card-icon">
-                        <i class="fas fa-store"></i>
-                    </div>
-                    <h3>Negocios con Equipos de Frío</h3>
-                    <p>Supermercados, minimarkets, laboratorios, restaurantes y empresas del sector alimentario o farmacéutico.</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">
-                        <i class="fas fa-tools"></i>
-                    </div>
-                    <h3>Técnicos Especializados</h3>
-                    <p>Profesionales en refrigeración que buscan optimizar su servicio y gestionar mejor sus clientes.</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">
-                        <i class="fas fa-industry"></i>
-                    </div>
-                    <h3>Proveedores de Equipos</h3>
-                    <p>Empresas que venden y dan mantenimiento a equipos de refrigeración comercial e industrial.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-		<!-- Funcionalidades Section -->
-		<section id="funcionalidades" class="features">
-			<div class="container">
-				<h2 class="section-title">Funcionalidades Clave</h2>
-				<div class="features-grid">
-					<div class="feature">
-						<div class="feature-icon">
-							<i class="fas fa-temperature-low"></i>
-						</div>
-						<h3>Monitoreo en Tiempo Real</h3>
-						<p>Seguimiento de temperatura, consumo energético y tiempo de uso de tus equipos.</p>
-					</div>
-					<div class="feature">
-						<div class="feature-icon">
-							<i class="fas fa-file-alt"></i>
-						</div>
-						<h3>Reportes Técnicos</h3>
-						<p>Generación automática de informes detallados sobre el estado de tus equipos.</p>
-					</div>
-					<div class="feature">
-						<div class="feature-icon">
-							<i class="fas fa-bell"></i>
-						</div>
-						<h3>Alertas Automatizadas</h3>
-						<p>Notificaciones inmediatas ante fallas o comportamientos anómalos.</p>
-					</div>
-					<div class="feature">
-						<div class="feature-icon">
-							<i class="fas fa-history"></i>
-						</div>
-						<h3>Historial de Rendimiento</h3>
-						<p>Registro completo del funcionamiento histórico de cada equipo.</p>
-					</div>
-					<div class="feature">
-						<div class="feature-icon">
-							<i class="fas fa-calendar-check"></i>
-						</div>
-						<h3>Mantenimiento Programado</h3>
-						<p>Planificación inteligente de mantenimientos preventivos.</p>
-					</div>
-					<div class="feature">
-						<div class="feature-icon">
-							<i class="fas fa-users"></i>
-						</div>
-						<h3>Conexión con Técnicos</h3>
-						<p>Acceso directo a profesionales especializados en tu zona.</p>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- Beneficios Section -->
-    <section id="beneficios" class="benefits">
-        <div class="container">
-            <h2 class="section-title">Beneficios</h2>
-            <div class="benefits-tabs">
-                <div class="tabs-header">
-                    <button class="tab-btn active" data-target="negocios">Para Negocios</button>
-                    <button class="tab-btn" data-target="tecnicos">Para Técnicos</button>
-                </div>
-                <div class="tabs-content">
-                    <div class="tab-content active" id="negocios">
-                        <div class="benefit-list">
-                            <div class="benefit-item">
-                                <i class="fas fa-check-circle"></i>
-                                <p>Reducción de pérdidas por fallas inesperadas</p>
-                            </div>
-                            <div class="benefit-item">
-                                <i class="fas fa-check-circle"></i>
-                                <p>Optimización del consumo energético</p>
-                            </div>
-                            <div class="benefit-item">
-                                <i class="fas fa-check-circle"></i>
-                                <p>Prolongación de la vida útil de los equipos</p>
-                            </div>
-                            <div class="benefit-item">
-                                <i class="fas fa-check-circle"></i>
-                                <p>Respuesta rápida ante emergencias</p>
-                            </div>
-                            <div class="benefit-item">
-                                <i class="fas fa-check-circle"></i>
-                                <p>Cumplimiento de normativas sanitarias</p>
-                            </div>
-                        </div>
-                        <div class="benefit-image">
-                            <img src="./assets/images/sales-leaderboard.png" alt="Dashboard de OsitoPolar para negocios">
-                        </div>
-                    </div>
-                    <div class="tab-content" id="tecnicos">
-                        <div class="benefit-list">
-                            <div class="benefit-item">
-                                <i class="fas fa-check-circle"></i>
-                                <p>Gestión centralizada de todos los clientes</p>
-                            </div>
-                            <div class="benefit-item">
-                                <i class="fas fa-check-circle"></i>
-                                <p>Acceso al historial técnico completo</p>
-                            </div>
-                            <div class="benefit-item">
-                                <i class="fas fa-check-circle"></i>
-                                <p>Generación automática de reportes</p>
-                            </div>
-                            <div class="benefit-item">
-                                <i class="fas fa-check-circle"></i>
-                                <p>Planificación eficiente de visitas técnicas</p>
-                            </div>
-                            <div class="benefit-item">
-                                <i class="fas fa-check-circle"></i>
-                                <p>Nuevas oportunidades de negocio</p>
-                            </div>
-                        </div>
-                        <div class="benefit-image">
-                            <img src="./assets/images/enterprise-dashboeard.jpg" alt="Aplicación OsitoPolar para proveedores">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Cómo Funciona Section -->
-    <section id="como-funciona" class="how-it-works">
-        <div class="container">
-            <h2 class="section-title">¿Cómo Funciona?</h2>
-            <div class="steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <div class="step-content">
-                        <h3>Conecta tus equipos</h3>
-                        <p>Instalamos sensores IoT compatibles con cualquier equipo de refrigeración.</p>
-                    </div>
-                </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <div class="step-content">
-                        <h3>Monitoreo automático</h3>
-                        <p>Nuestro sistema comienza a recopilar y analizar datos en tiempo real.</p>
-                    </div>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <div class="step-content">
-                        <h3>Recibe alertas</h3>
-                        <p>Te notificamos ante cualquier anomalía o necesidad de mantenimiento.</p>
-                    </div>
-                </div>
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <div class="step-content">
-                        <h3>Contacto con técnicos</h3>
-                        <p>Conectamos automáticamente con especialistas disponibles en tu zona.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-		<!-- Nosotros Section -->
-		<section id="nosotros" class="about">
-			<div class="container">
-				<div class="about-content">
-					<div class="about-text">
-						<h2 class="section-title">Sobre OsitoPolar</h2>
-						<div class="mission-vision">
-							<div class="mission">
-								<h3>Misión</h3>
-								<p>Proporcionar una solución tecnológica inteligente que permita a los negocios proteger su inventario y optimizar la gestión de sus equipos de refrigeración, ofreciendo al mismo tiempo herramientas especializadas para mejorar la eficiencia operativa de los técnicos y proveedores del sector.</p>
-							</div>
-							<div class="vision">
-								<h3>Visión</h3>
-								<p>Ser la empresa líder en gestión y mantenimiento de equipos de refrigeración, empezando por Lima y prontamente expandirnos a más lugares del Perú.</p>
-							</div>
-						</div>
-					</div>
-					<div class="about-image">
-						<img src="./assets/images/OsitoPolar-Team.jpg" alt="Equipo de OsitoPolar">
-					</div>
-				</div>
-			</div>
-
-
-    <!-- Testimonios Section -->
-    <section class="testimonials">
-        <div class="container">
-            <h2 class="section-title">Lo que dicen nuestros clientes</h2>
-            <div class="testimonial-slider">
-                <div class="testimonial active">
-                    <div class="testimonial-content">
-                        <p>"Desde que implementamos OsitoPolar, hemos reducido en un 40% las pérdidas por fallas en nuestros equipos de refrigeración. El sistema de alertas nos ha salvado varias veces de perder inventario valioso."</p>
-                        <div class="testimonial-author">
-                            <img src="./assets/images/thispersondoesnotexist2.jpg" alt="Foto de cliente">
-                            <div>
-                                <h4>Carla Mendoza</h4>
-                                <p>Gerente de Operaciones, Supermercados ABC</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial">
-                    <div class="testimonial-content">
-                        <p>"Como técnico especializado, OsitoPolar ha revolucionado mi forma de trabajar. Ahora puedo ver el historial completo de cada equipo antes de visitarlo y generar reportes profesionales en minutos."</p>
-                        <div class="testimonial-author">
-                            <img src="./assets/images/thispersondoesnotexist1.jpg" alt="Foto de cliente">
-                            <div>
-                                <h4>Laura Sánchez</h4>
-                                <p>Técnica en Refrigeración Industrial</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial">
-                    <div class="testimonial-content">
-                        <p>"La tranquilidad que nos da saber que nuestros equipos están siendo monitoreados 24/7 no tiene precio. Además, hemos notado un ahorro significativo en nuestro consumo eléctrico gracias a las recomendaciones del sistema."</p>
-                        <div class="testimonial-author">
-                            <img src="./assets/images/thispersondoesnotexist.jpg" alt="Foto de cliente">
-                            <div>
-                                <h4>Miguel Prado</h4>
-                                <p>Propietario, Restaurante El Glaciar</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-controls">
-                <button class="prev-btn" aria-label="Testimonio anterior"><i class="fas fa-chevron-left"></i></button>
-                <div class="testimonial-dots">
-                    <span class="dot active" data-index="0"></span>
-                    <span class="dot" data-index="1"></span>
-                    <span class="dot" data-index="2"></span>
-                </div>
-                <button class="next-btn" aria-label="Testimonio siguiente"><i class="fas fa-chevron-right"></i></button>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section id="demo" class="cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h2>¿Listo para optimizar la gestión de tus equipos de refrigeración?</h2>
-                <p>Solicita una demostración gratuita y descubre cómo OsitoPolar puede transformar tu negocio.</p>
-                <form id="demo-form" class="demo-form">
-                    <div class="form-group">
-                        <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
-                        <span class="form-error" id="nombre-error"></span>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
-                        <span class="form-error" id="email-error"></span>
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" required>
-                        <span class="form-error" id="telefono-error"></span>
-                    </div>
-                    <div class="form-group">
-                        <select id="tipo-negocio" name="tipo-negocio" required>
-                            <option value="" disabled selected>Tipo de negocio</option>
-                            <option value="supermercado">Supermercado</option>
-                            <option value="restaurante">Restaurante</option>
-                            <option value="farmacia">Farmacia/Laboratorio</option>
-                            <option value="tecnico">Técnico de refrigeración</option>
-                            <option value="proveedor">Proveedor de equipos</option>
-                            <option value="otro">Otro</option>
-                        </select>
-                        <span class="form-error" id="tipo-negocio-error"></span>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-large">Solicitar Demo</button>
-                </form>
-                <div id="form-success" class="form-success hidden">
-                    <i class="fas fa-check-circle"></i>
-                    <p>¡Gracias por tu interés! Te contactaremos pronto para coordinar tu demostración.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer id="contacto">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="logo.png" alt="OsitoPolar Logo">
-                    <h3>OsitoPolar</h3>
-                    <p>Gestión inteligente de equipos de refrigeración</p>
-                </div>
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h4>Empresa</h4>
-                        <ul>
-                            <li><a href="#nosotros">Sobre nosotros</a></li>
-                            <li><a href="#equipo">Nuestro equipo</a></li>
-                            <li><a href="#blog">Blog</a></li>
-                            <li><a href="#prensa">Prensa</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Soluciones</h4>
-                        <ul>
-                            <li><a href="#negocios">Para negocios</a></li>
-                            <li><a href="#tecnicos">Para técnicos</a></li>
-                            <li><a href="#proveedores">Para proveedores</a></li>
-                            <li><a href="#precios">Precios</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Soporte</h4>
-                        <ul>
-                            <li><a href="#ayuda">Centro de ayuda</a></li>
-                            <li><a href="#tutoriales">Tutoriales</a></li>
-                            <li><a href="#faq">Preguntas frecuentes</a></li>
-                            <li><a href="#contacto">Contacto</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Contacto</h4>
-                        <ul class="contact-info">
-                            <li><i class="fas fa-map-marker-alt"></i> Av. La Marina 123, Lima, Perú</li>
-                            <li><i class="fas fa-phone"></i> +51 123 456 789</li>
-                            <li><i class="fas fa-envelope"></i> info@ositopolar.com</li>
-                        </ul>
-                        <div class="social-media">
-                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2023 OsitoPolar. Todos los derechos reservados.</p>
-                <div class="legal-links">
-                    <a href="#terminos">Términos y condiciones</a>
-                    <a href="#privacidad">Política de privacidad</a>
-                    <a href="#cookies">Política de cookies</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Back to Top Button -->
-    <button id="back-to-top" aria-label="Volver arriba">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
-    <!-- Cookie Consent -->
-    <div id="cookie-consent" class="cookie-consent">
-        <div class="container">
-            <p>Utilizamos cookies para mejorar tu experiencia en nuestro sitio web. <a href="#cookies">Más información</a></p>
-            <div class="cookie-buttons">
-                <button id="cookie-accept" class="btn btn-primary">Aceptar</button>
-                <button id="cookie-decline" class="btn btn-outline">Rechazar</button>
+            <p>They trust in us</p>
+            <div class="client-logos">
+                <img src="./assets/images/Metro_logo_con_fondo_2013_1.webp" alt="Logo cliente 1">
+                <img src="./assets/images/D%2527onofrio_2014.webp" alt="Logo cliente 2">
+                <img src="./assets/images/unnamed.png" alt="Logo cliente 3">
             </div>
         </div>
     </div>
+</section>
 
-    <script src="script.js"></script>
+<!-- For whom es Section -->
+<section id="for-whom" class="for-whom">
+    <div class="container">
+        <h2 class="section-title">Who is OsitoPolar for?</h2>
+        <div class="audience-cards">
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-store"></i>
+                </div>
+                <h3>Businesses with Cold Equipment</h3>
+                <p>Supermarkets, mini-markets, laboratories, restaurants and companies in the food or pharmaceutical
+                    sector.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <h3>Specialized Technicians</h3>
+                <p>Refrigeration professionals looking to optimize their service and better manage their clients.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-industry"></i>
+                </div>
+                <h3>Equipment Suppliers</h3>
+                <p>Companies that sell and maintain commercial and industrial refrigeration equipment.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section id="features" class="features">
+    <div class="container">
+        <h2 class="section-title">Key Features</h2>
+        <div class="features-grid">
+            <div class="feature">
+                <div class="feature-icon">
+                    <i class="fas fa-temperature-low"></i>
+                </div>
+                <h3>Real-Time Monitoring</h3>
+                <p>Tracking of temperature, energy consumption and usage time of your equipment.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">
+                    <i class="fas fa-file-alt"></i>
+                </div>
+                <h3>Technical Reports</h3>
+                <p>Automatic generation of detailed reports on the status of your equipment.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">
+                    <i class="fas fa-bell"></i>
+                </div>
+                <h3>Automated Alerts</h3>
+                <p>Immediate notifications of failures or abnormal behavior.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">
+                    <i class="fas fa-history"></i>
+                </div>
+                <h3>Performance History</h3>
+                <p>Complete record of the historical operation of each piece of equipment.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">
+                    <i class="fas fa-calendar-check"></i>
+                </div>
+                <h3>Scheduled Maintenance</h3>
+                <p>Intelligent planning of preventive maintenance.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3>Connection with Technicians</h3>
+                <p>Direct access to specialized professionals in your area.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Benefits Section -->
+<section id="benefits" class="benefits">
+    <div class="container">
+        <h2 class="section-title">Benefits</h2>
+        <div class="benefits-tabs">
+            <div class="tabs-header">
+                <button class="tab-btn active" data-target="negocios">For Business</button>
+                <button class="tab-btn" data-target="tecnicos">For Companies</button>
+            </div>
+            <div class="tabs-content">
+                <div class="tab-content active" id="negocios">
+                    <div class="benefit-list">
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Reduction of losses from unexpected failures</p>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Energy consumption optimization</p>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Extended equipment lifespan</p>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Quick response to emergencies</p>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Compliance with health regulations</p>
+                        </div>
+                    </div>
+                    <div class="benefit-image">
+                        <img src="./assets/images/sales-leaderboard.png" alt="Dashboard de OsitoPolar para negocios">
+                    </div>
+                </div>
+                <div class="tab-content" id="tecnicos">
+                    <div class="benefit-list">
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Centralized management of all clients</p>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Access to complete technical history</p>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Automatic report generation</p>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Efficient planning of technical visits</p>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <p>New business opportunities</p>
+                        </div>
+                    </div>
+                    <div class="benefit-image">
+                        <img src="./assets/images/enterprise-dashboeard.jpg"
+                             alt="Aplicación OsitoPolar para proveedores">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How it works Section -->
+<section id="how-it-works" class="how-it-works">
+    <div class="container">
+        <h2 class="section-title">How Does it Work?</h2>
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Connect your equipment</h3>
+                    <p>We install IoT sensors compatible with any refrigeration equipment.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Automatic monitoring</h3>
+                    <p>Our system begins collecting and analyzing data in real-time.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Receive alerts</h3>
+                    <p>We notify you of any anomalies or maintenance needs.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>Contact with Companie's technicians</h3>
+                    <p>We automatically connect you with available specialists in your area.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--  About us Section -->
+<section id="about-us" class="about">
+    <div class="container">
+        <div class="about-content">
+            <div class="about-text">
+                <h2 class="section-title">About Osito Polar</h2>
+                <div class="mission-vision">
+                    <div class="mission">
+                        <h3>Mission</h3>
+                        <p>To provide an intelligent technological solution that allows businesses to protect their
+                            inventory and optimize the management of their refrigeration equipment, while offering
+                            specialized tools to improve the operational efficiency of technicians and suppliers in the
+                            sector.</p>
+                    </div>
+                    <div class="vision">
+                        <h3>Vision</h3>
+                        <p>To be the leading company in refrigeration equipment management and maintenance, starting in
+                            Lima and soon expanding to more places in Peru.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image">
+                <img src="./assets/images/OsitoPolar-Team.jpg" alt="Equipo de OsitoPolar">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials">
+    <div class="container">
+        <h2 class="section-title">What Our Clients Say</h2>
+        <div class="testimonial-slider">
+            <div class="testimonial active">
+                <div class="testimonial-content">
+                    <p>"Since implementing OsitoPolar, we have reduced losses from failures in our refrigeration
+                        equipment by 40%. The alert system has saved us several times from losing valuable
+                        inventory."</p>
+                    <div class="testimonial-author">
+                        <img src="./assets/images/thispersondoesnotexist2.jpg" alt="Foto de cliente">
+                        <div>
+                            <h4>Carla Mendoza</h4>
+                            <p>Operations Manager, ABC Supermarkets</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-content">
+                    <p>"As a specialized technician, OsitoPolar has revolutionized my way of working with my
+                        Company. Now I can view the complete history of each piece of equipment before visiting it
+                        and generate professional reports in minutes."</p>
+                    <div class="testimonial-author">
+                        <img src="./assets/images/thispersondoesnotexist1.jpg" alt="Foto de cliente">
+                        <div>
+                            <h4>Laura Sánchez</h4>
+                            <p>Industrial Refrigeration Technician</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-content">
+                    <p>"The peace of mind that comes from knowing our equipment is being monitored 24/7 is
+                        priceless. Additionally, we've noticed significant savings in our electricity consumption
+                        thanks to the system's recommendations."</p>
+                    <div class="testimonial-author">
+                        <img src="./assets/images/thispersondoesnotexist.jpg" alt="Foto de cliente">
+                        <div>
+                            <h4>Miguel Prado</h4>
+                            <p>Owner, El Glaciar Restaurant</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial-controls">
+            <button class="prev-btn" aria-label="Previous Testimonial"><i class="fas fa-chevron-left"></i></button>
+            <div class="testimonial-dots">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+            </div>
+            <button class="next-btn" aria-label="Next Testimonial"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section id="demo" class="cta-section">
+    <div class="container">
+        <div class="cta-content">
+            <h2>Ready to optimize the management of your refrigeration equipment?</h2>
+            <p>Request a free demonstration and discover how OsitoPolar can transform your business.</p>
+            <form id="demo-form" class="demo-form">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Full name" required>
+                    <span class="form-error" id="name-error"></span>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                    <span class="form-error" id="email-error"></span>
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="phone" name="phone" placeholder="Phone" required>
+                    <span class="form-error" id="phone-error"></span>
+                </div>
+                <div class="form-group">
+                    <select id="business-type" name="business-type" required>
+                        <option value="" disabled selected>Business type</option>
+                        <option value="supermarket">Supermarket</option>
+                        <option value="restaurant">Restaurant</option>
+                        <option value="pharmacy">Pharmacy/Laboratory</option>
+                        <option value="technician">Refrigeration Technician</option>
+                        <option value="provider">Equipment Provider</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <span class="form-error" id="business-type-error"></span>
+                </div>
+                <button type="submit" class="btn btn-primary btn-large">Request Demo</button>
+            </form>
+            <div id="form-success" class="form-success hidden">
+                <i class="fas fa-check-circle"></i>
+                <p>Thank you for your interest! We will contact you soon to coordinate your demonstration.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer id="contact">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="logo.png" alt="OsitoPolar Logo">
+                <h3>OsitoPolar</h3>
+                <p>Intelligent management of refrigeration equipment</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#about-us">About us</a></li>
+                        <li><a href="#team">Our team</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#press">Press</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Solutions</h4>
+                    <ul>
+                        <li><a href="#businesses">For businesses</a></li>
+                        <li><a href="#suppliers">For suppliers</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#help">Help center</a></li>
+                        <li><a href="#tutorials">Tutorials</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> Av. La Marina 2810, Lima, Peru</li>
+                        <li><i class="fas fa-phone"></i> +51 123 456 789</li>
+                        <li><i class="fas fa-envelope"></i> info@ositopolar.com</li>
+                    </ul>
+                    <div class="social-media">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> OsitoPolar. All rights reserved.</p>
+            <div class="legal-links">
+                <a href="#terms">Terms and conditions</a>
+                <a href="#privacy">Privacy policy</a>
+                <a href="#cookies">Cookie policy</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Back to Top Button -->
+<button id="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- Cookie Consent -->
+<div id="cookie-consent" class="cookie-consent">
+    <div class="container">
+        <p>We use cookies to improve your experience on our website. <a href="#cookies">More information</a></p>
+        <div class="cookie-buttons">
+            <button id="cookie-accept" class="btn btn-primary">Accept</button>
+            <button id="cookie-decline" class="btn btn-outline">Decline</button>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>

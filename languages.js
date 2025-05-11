@@ -1,354 +1,281 @@
-﻿// Objeto con todas las traducciones
+﻿// Object with all translations
 const translations = {
     'es': {
         // Header
-        'solicitar_demo': 'Solicitar Demo',
-        'inicio': 'Inicio',
-        'funcionalidades': 'Funcionalidades',
-        'beneficios': 'Beneficios',
-        'nosotros': 'Nosotros',
-        'contacto': 'Contacto',
+        'request_demo': 'Solicitar Demo',
+        'home': 'Inicio',
+        'features': 'Funcionalidades',
+        'benefits': 'Beneficios',
+        'about_us': 'Nosotros',
+        'contact': 'Contacto',
 
         // Hero Section
         'hero_title': 'Gestión Inteligente de Equipos de Refrigeración',
         'hero_subtitle': 'Conectamos negocios con técnicos especializados para un mantenimiento preventivo y automatizado de sistemas de congelación.',
-        'demo_gratis': 'Solicitar Demo Gratis',
-        'como_funciona': '¿Cómo funciona?',
-        'confian': 'Confían en nosotros:',
+        'free_demo': 'Solicitar Demo Gratis',
+        'how_it_works': '¿Cómo funciona?',
+        'trust_us': 'Confían en nosotros:',
 
-        // Para quién Section
-        'para_quien': '¿Para quién es OsitoPolar?',
-        'negocios_frio': 'Negocios con Equipos de Frío',
-        'negocios_desc': 'Supermercados, minimarkets, laboratorios, restaurantes y empresas del sector alimentario o farmacéutico.',
-        'tecnicos': 'Técnicos Especializados',
-        'tecnicos_desc': 'Profesionales en refrigeración que buscan optimizar su servicio y gestionar mejor sus clientes.',
-        'proveedores': 'Proveedores de Equipos',
-        'proveedores_desc': 'Empresas que venden y dan mantenimiento a equipos de refrigeración comercial e industrial.',
+        // For whom Section
+        'for_whom': '¿Para quién es OsitoPolar?',
+        'businesses_cold': 'Negocios con Equipos de Frío',
+        'businesses_desc': 'Supermercados, minimarkets, laboratorios, restaurantes y empresas del sector alimentario o farmacéutico.',
+        'technicians': 'Técnicos Especializados',
+        'technicians_desc': 'Profesionales en refrigeración que buscan optimizar su servicio y gestionar mejor sus clientes.',
+        'suppliers': 'Proveedores de Equipos',
+        'suppliers_desc': 'Empresas que venden y dan mantenimiento a equipos de refrigeración comercial e industrial.',
 
-        // Funcionalidades Section
-        'funcionalidades_title': 'Funcionalidades Clave',
-        'monitoreo_title': 'Monitoreo en Tiempo Real',
-        'monitoreo_desc': 'Seguimiento de temperatura, consumo energético y tiempo de uso de tus equipos.',
-        'reportes_title': 'Reportes Técnicos',
-        'reportes_desc': 'Generación automática de informes detallados sobre el estado de tus equipos.',
-        'alertas_title': 'Alertas Automatizadas',
-        'alertas_desc': 'Notificaciones inmediatas ante fallas o comportamientos anómalos.',
-        'historial_title': 'Historial de Rendimiento',
-        'historial_desc': 'Registro completo del funcionamiento histórico de cada equipo.',
-        'mantenimiento_title': 'Mantenimiento Programado',
-        'mantenimiento_desc': 'Planificación inteligente de mantenimientos preventivos.',
-        'conexion_title': 'Conexión con Técnicos',
-        'conexion_desc': 'Acceso directo a profesionales especializados en tu zona.',
+        // Features Section
+        'features_title': 'Funcionalidades Clave',
+        'monitoring_title': 'Monitoreo en Tiempo Real',
+        'monitoring_desc': 'Seguimiento de temperatura, consumo energético y tiempo de uso de tus equipos.',
+        'reports_title': 'Reportes Técnicos',
+        'reports_desc': 'Generación automática de informes detallados sobre el estado de tus equipos.',
+        'alerts_title': 'Alertas Automatizadas',
+        'alerts_desc': 'Notificaciones inmediatas ante fallas o comportamientos anómalos.',
+        'history_title': 'Historial de Rendimiento',
+        'history_desc': 'Registro completo del funcionamiento histórico de cada equipo.',
+        'maintenance_title': 'Mantenimiento Programado',
+        'maintenance_desc': 'Planificación inteligente de mantenimientos preventivos.',
+        'connection_title': 'Conexión con Técnicos',
+        'connection_desc': 'Acceso directo a profesionales especializados en tu zona.',
 
-        // Beneficios Section
-        'beneficios_title': 'Beneficios',
-        'para_negocios': 'Para Negocios',
-        'para_tecnicos': 'Para Técnicos',
-        'beneficio1_negocios': 'Reducción de pérdidas por fallas inesperadas',
-        'beneficio2_negocios': 'Optimización del consumo energético',
-        'beneficio3_negocios': 'Prolongación de la vida útil de los equipos',
-        'beneficio4_negocios': 'Respuesta rápida ante emergencias',
-        'beneficio5_negocios': 'Cumplimiento de normativas sanitarias',
-        'beneficio1_tecnicos': 'Gestión centralizada de todos los clientes',
-        'beneficio2_tecnicos': 'Acceso al historial técnico completo',
-        'beneficio3_tecnicos': 'Generación automática de reportes',
-        'beneficio4_tecnicos': 'Planificación eficiente de visitas técnicas',
-        'beneficio5_tecnicos': 'Nuevas oportunidades de negocio',
+        // Benefits Section
+        'benefits_title': 'Beneficios',
+        'for_businesses': 'Para Negocios',
+        'for_technicians': 'Para Proveedores',
+        'benefit1_businesses': 'Reducción de pérdidas por fallas inesperadas',
+        'benefit2_businesses': 'Optimización del consumo energético',
+        'benefit3_businesses': 'Prolongación de la vida útil de los equipos',
+        'benefit4_businesses': 'Respuesta rápida ante emergencias',
+        'benefit5_businesses': 'Cumplimiento de normativas sanitarias',
+        'benefit1_technicians': 'Gestión centralizada de todos los clientes',
+        'benefit2_technicians': 'Acceso al historial técnico completo',
+        'benefit3_technicians': 'Generación automática de reportes',
+        'benefit4_technicians': 'Planificación eficiente de visitas técnicas',
+        'benefit5_technicians': 'Nuevas oportunidades de negocio',
 
-        // Nosotros Section
-        'nosotros_title': 'Sobre OsitoPolar',
-        'mision_title': 'Misión',
-        'mision_desc': 'Proporcionar una solución tecnológica inteligente que permita a los negocios proteger su inventario y optimizar la gestión de sus equipos de refrigeración, ofreciendo al mismo tiempo herramientas especializadas para mejorar la eficiencia operativa de los técnicos y proveedores del sector.',
+        // About us Section
+        'about_us_title': 'Sobre OsitoPolar',
+        'mission_title': 'Misión',
+        'mission_desc': 'Proporcionar una solución tecnológica inteligente que permita a los negocios proteger su inventario y optimizar la gestión de sus equipos de refrigeración, ofreciendo al mismo tiempo herramientas especializadas para mejorar la eficiencia operativa de los técnicos y proveedores del sector.',
         'vision_title': 'Visión',
         'vision_desc': 'Ser la empresa líder en gestión y mantenimiento de equipos de refrigeración, empezando por Lima y prontamente expandirnos a más lugares del Perú.',
 
-        // Cómo funciona Section
-        'como_funciona_title': '¿Cómo Funciona?',
-        'paso1_title': 'Conecta tus equipos',
-        'paso1_desc': 'Instalamos sensores IoT compatibles con cualquier equipo de refrigeración.',
-        'paso2_title': 'Monitoreo automático',
-        'paso2_desc': 'Nuestro sistema comienza a recopilar y analizar datos en tiempo real.',
-        'paso3_title': 'Recibe alertas',
-        'paso3_desc': 'Te notificamos ante cualquier anomalía o necesidad de mantenimiento.',
-        'paso4_title': 'Contacto con técnicos',
-        'paso4_desc': 'Conectamos automáticamente con especialistas disponibles en tu zona.',
+        // How it works Section
+        'how_it_works_title': '¿Cómo Funciona?',
+        'step1_title': 'Conecta tus equipos',
+        'step1_desc': 'Instalamos sensores IoT compatibles con cualquier equipo de refrigeración.',
+        'step2_title': 'Monitoreo automático',
+        'step2_desc': 'Nuestro sistema comienza a recopilar y analizar datos en tiempo real.',
+        'step3_title': 'Recibe alertas',
+        'step3_desc': 'Te notificamos ante cualquier anomalía o necesidad de mantenimiento.',
+        'step4_title': 'Contacto con técnicos',
+        'step4_desc': 'Conectamos automáticamente con especialistas disponibles en tu zona.',
 
-        // Testimonios Section
-        'testimonios_title': 'Lo que dicen nuestros clientes',
+        // Testimonials Section
+        'testimonials_title': 'Lo que dicen nuestros clientes',
 
         // CTA Section
         'cta_title': '¿Listo para optimizar la gestión de tus equipos de refrigeración?',
         'cta_subtitle': 'Solicita una demostración gratuita y descubre cómo OsitoPolar puede transformar tu negocio.',
-        'nombre': 'Nombre completo',
-        'correo': 'Correo electrónico',
-        'telefono': 'Teléfono',
-        'tipo_negocio': 'Tipo de negocio',
-        'tipo_negocio_placeholder': 'Tipo de negocio',
-        'supermercado': 'Supermercado',
-        'restaurante': 'Restaurante',
-        'farmacia': 'Farmacia/Laboratorio',
-        'tecnico': 'Técnico de refrigeración',
-        'proveedor': 'Proveedor de equipos',
-        'otro': 'Otro',
-        'solicitar': 'Solicitar Demo',
+        'full_name': 'Nombre completo',
+        'email': 'Correo electrónico',
+        'phone': 'Teléfono',
+        'business_type': 'Tipo de negocio',
+        'business_type_placeholder': 'Tipo de negocio',
+        'supermarket': 'Supermercado',
+        'restaurant': 'Restaurante',
+        'pharmacy': 'Farmacia/Laboratorio',
+        'technician': 'Técnico de refrigeración',
+        'provider': 'Proveedor de equipos',
+        'other': 'Otro',
+        'request': 'Solicitar Demo',
         'form_success': '¡Gracias por tu interés! Te contactaremos pronto para coordinar tu demostración.',
 
         // Footer
-        'gestion_inteligente': 'Gestión inteligente de equipos de refrigeración',
-        'empresa': 'Empresa',
-        'sobre_nosotros': 'Sobre nosotros',
-        'nuestro_equipo': 'Nuestro equipo',
+        'smart_management': 'Gestión inteligente de equipos de refrigeración',
+        'company': 'Empresa',
+        'about_us_footer': 'Sobre nosotros',
+        'our_team': 'Nuestro equipo',
         'blog': 'Blog',
-        'prensa': 'Prensa',
-        'soluciones': 'Soluciones',
-        'para_negocios_footer': 'Para negocios',
-        'para_tecnicos_footer': 'Para técnicos',
-        'para_proveedores': 'Para proveedores',
-        'precios': 'Precios',
-        'soporte': 'Soporte',
-        'ayuda': 'Centro de ayuda',
-        'tutoriales': 'Tutoriales',
+        'press': 'Prensa',
+        'solutions': 'Soluciones',
+        'for_businesses_footer': 'Para negocios',
+        'for_technicians_footer': 'Para técnicos',
+        'for_suppliers': 'Para proveedores',
+        'pricing': 'Precios',
+        'support': 'Soporte',
+        'help_center': 'Centro de ayuda',
+        'tutorials': 'Tutoriales',
         'faq': 'Preguntas frecuentes',
-        'contacto_footer': 'Contacto',
-        'derechos': 'Todos los derechos reservados.',
-        'terminos': 'Términos y condiciones',
-        'privacidad': 'Política de privacidad',
-        'cookies': 'Política de cookies',
-        'cookies_mensaje': 'Utilizamos cookies para mejorar tu experiencia en nuestro sitio web.',
-        'mas_info': 'Más información',
-        'aceptar': 'Aceptar',
-        'rechazar': 'Rechazar',
-        'volver_arriba': 'Volver arriba',
+        'contact_footer': 'Contacto',
+        'rights_reserved': 'Todos los derechos reservados.',
+        'terms': 'Términos y condiciones',
+        'privacy': 'Política de privacidad',
+        'cookies_policy': 'Política de cookies',
+        'cookies_message': 'Utilizamos cookies para mejorar tu experiencia en nuestro sitio web.',
+        'more_info': 'Más información',
+        'accept': 'Aceptar',
+        'decline': 'Rechazar',
+        'back_to_top': 'Volver arriba',
 
-        // Errores formulario
-        'error_nombre': 'Por favor, ingresa tu nombre',
+        // Form errors
+        'error_name': 'Por favor, ingresa tu nombre',
         'error_email': 'Por favor, ingresa un email válido',
-        'error_telefono': 'Por favor, ingresa tu teléfono',
-        'error_tipo_negocio': 'Por favor, selecciona tu tipo de negocio'
+        'error_phone': 'Por favor, ingresa tu teléfono',
+        'error_business_type': 'Por favor, selecciona tu tipo de negocio'
     },
     'en': {
-        // Header
-        'solicitar_demo': 'Request Demo',
-        'inicio': 'Home',
-        'funcionalidades': 'Features',
-        'beneficios': 'Benefits',
-        'nosotros': 'About Us',
-        'contacto': 'Contact',
-
-        // Hero Section
-        'hero_title': 'Smart Refrigeration Equipment Management',
-        'hero_subtitle': 'We connect businesses with specialized technicians for preventive and automated maintenance of freezing systems.',
-        'demo_gratis': 'Request Free Demo',
-        'como_funciona': 'How it works?',
-        'confian': 'They trust us:',
-
-        // Para quién Section
-        'para_quien': 'Who is OsitoPolar for?',
-        'negocios_frio': 'Businesses with Cold Equipment',
-        'negocios_desc': 'Supermarkets, minimarkets, laboratories, restaurants, and companies in the food or pharmaceutical sector.',
-        'tecnicos': 'Specialized Technicians',
-        'tecnicos_desc': 'Refrigeration professionals looking to optimize their service and better manage their clients.',
-        'proveedores': 'Equipment Suppliers',
-        'proveedores_desc': 'Companies that sell and maintain commercial and industrial refrigeration equipment.',
-
-        // Funcionalidades Section
-        'funcionalidades_title': 'Key Features',
-        'monitoreo_title': 'Real-Time Monitoring',
-        'monitoreo_desc': 'Track temperature, energy consumption and usage time of your equipment.',
-        'reportes_title': 'Technical Reports',
-        'reportes_desc': 'Automatic generation of detailed reports on the status of your equipment.',
-        'alertas_title': 'Automated Alerts',
-        'alertas_desc': 'Immediate notifications of failures or abnormal behavior.',
-        'historial_title': 'Performance History',
-        'historial_desc': 'Complete record of the historical operation of each equipment.',
-        'mantenimiento_title': 'Scheduled Maintenance',
-        'mantenimiento_desc': 'Intelligent planning of preventive maintenance.',
-        'conexion_title': 'Connection with Technicians',
-        'conexion_desc': 'Direct access to specialized professionals in your area.',
-
-        // Beneficios Section
-        'beneficios_title': 'Benefits',
-        'para_negocios': 'For Businesses',
-        'para_tecnicos': 'For Technicians',
-        'beneficio1_negocios': 'Reduction of losses due to unexpected failures',
-        'beneficio2_negocios': 'Optimization of energy consumption',
-        'beneficio3_negocios': 'Extended equipment lifespan',
-        'beneficio4_negocios': 'Quick response to emergencies',
-        'beneficio5_negocios': 'Compliance with health regulations',
-        'beneficio1_tecnicos': 'Centralized management of all clients',
-        'beneficio2_tecnicos': 'Access to complete technical history',
-        'beneficio3_tecnicos': 'Automatic report generation',
-        'beneficio4_tecnicos': 'Efficient scheduling of technical visits',
-        'beneficio5_tecnicos': 'New business opportunities',
-
-        // Nosotros Section
-        'nosotros_title': 'About OsitoPolar',
-        'mision_title': 'Mission',
-        'mision_desc': 'To provide an intelligent technological solution that allows businesses to protect their inventory and optimize the management of their refrigeration equipment, while offering specialized tools to improve the operational efficiency of technicians and suppliers in the sector.',
-        'vision_title': 'Vision',
-        'vision_desc': 'To be the leading company in refrigeration equipment management and maintenance, starting in Lima and soon expanding to more locations in Peru.',
-
-        // Cómo funciona Section
-        'como_funciona_title': 'How Does It Work?',
-        'paso1_title': 'Connect your equipment',
-        'paso1_desc': 'We install IoT sensors compatible with any refrigeration equipment.',
-        'paso2_title': 'Automatic monitoring',
-        'paso2_desc': 'Our system begins collecting and analyzing data in real-time.',
-        'paso3_title': 'Receive alerts',
-        'paso3_desc': 'We notify you of any anomalies or maintenance needs.',
-        'paso4_title': 'Contact with technicians',
-        'paso4_desc': 'We automatically connect you with available specialists in your area.',
-
-        // Testimonios Section
-        'testimonios_title': 'What our clients say',
-
-        // CTA Section
-        'cta_title': 'Ready to optimize the management of your refrigeration equipment?',
-        'cta_subtitle': 'Request a free demonstration and discover how OsitoPolar can transform your business.',
-        'nombre': 'Full name',
-        'correo': 'Email',
-        'telefono': 'Phone',
-        'tipo_negocio': 'Business type',
-        'tipo_negocio_placeholder': 'Business type',
-        'supermercado': 'Supermarket',
-        'restaurante': 'Restaurant',
-        'farmacia': 'Pharmacy/Laboratory',
-        'tecnico': 'Refrigeration technician',
-        'proveedor': 'Equipment provider',
-        'otro': 'Other',
-        'solicitar': 'Request Demo',
-        'form_success': 'Thank you for your interest! We will contact you soon to coordinate your demonstration.',
-
-        // Footer
-        'gestion_inteligente': 'Smart refrigeration equipment management',
-        'empresa': 'Company',
-        'sobre_nosotros': 'About us',
-        'nuestro_equipo': 'Our team',
-        'blog': 'Blog',
-        'prensa': 'Press',
-        'soluciones': 'Solutions',
-        'para_negocios_footer': 'For businesses',
-        'para_tecnicos_footer': 'For technicians',
-        'para_proveedores': 'For suppliers',
-        'precios': 'Pricing',
-        'soporte': 'Support',
-        'ayuda': 'Help center',
-        'tutoriales': 'Tutorials',
-        'faq': 'FAQ',
-        'contacto_footer': 'Contact',
-        'derechos': 'All rights reserved.',
-        'terminos': 'Terms and conditions',
-        'privacidad': 'Privacy policy',
-        'cookies': 'Cookie policy',
-        'cookies_mensaje': 'We use cookies to improve your experience on our website.',
-        'mas_info': 'More information',
-        'aceptar': 'Accept',
-        'rechazar': 'Decline',
-        'volver_arriba': 'Back to top',
-
-        // Errores formulario
-        'error_nombre': 'Please enter your name',
-        'error_email': 'Please enter a valid email',
-        'error_telefono': 'Please enter your phone number',
-        'error_tipo_negocio': 'Please select your business type'
+        // No need to define English translations as they are the default in HTML file bruh
     }
 };
 
-// Función para cambiar el idioma
+// Function to change language
 function changeLanguage(lang) {
-    // Guardar preferencia de idioma
+    // Save language preference
     localStorage.setItem('language', lang);
 
-    // Actualizar textos en la página
-    updateContent(lang);
+    // If switching to English, restore original HTML content
+    if (lang === 'en') {
+        document.querySelectorAll('[data-i18n]').forEach(element => {
+            const key = element.getAttribute('data-i18n');
+            // Reset to original English content
+            if (element.hasAttribute('data-i18n-original')) {
+                const originalText = element.getAttribute('data-i18n-original');
+                if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                    element.placeholder = originalText;
+                } else {
+                    element.textContent = originalText;
+                }
+            }
+        });
+    }
+    // If switching to Spanish or another language, translate content
+    else {
+        document.querySelectorAll('[data-i18n]').forEach(element => {
+            const key = element.getAttribute('data-i18n');
 
-    // Actualizar el botón de idioma
+            // Store original English text if not already stored
+            if (!element.hasAttribute('data-i18n-original')) {
+                const originalText = element.tagName === 'INPUT' || element.tagName === 'TEXTAREA'
+                    ? element.placeholder
+                    : element.textContent;
+                element.setAttribute('data-i18n-original', originalText);
+            }
+
+            // Set translated text
+            if (translations[lang] && translations[lang][key]) {
+                if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                    element.placeholder = translations[lang][key];
+                } else {
+                    element.textContent = translations[lang][key];
+                }
+            }
+        });
+    }
+
+    // Update special attributes like title, alt, etc.
+    document.querySelectorAll('[data-i18n-attr]').forEach(element => {
+        const data = element.getAttribute('data-i18n-attr').split(',');
+        data.forEach(item => {
+            const [attr, key] = item.split(':');
+            if (attr && key) {
+                // For English, restore original attribute if stored
+                if (lang === 'en' && element.hasAttribute(`data-i18n-original-${attr}`)) {
+                    element.setAttribute(attr, element.getAttribute(`data-i18n-original-${attr}`));
+                }
+                // For other languages, translate and store original if needed
+                else if (lang !== 'en' && translations[lang] && translations[lang][key]) {
+                    // Store original English attribute if not already stored
+                    if (!element.hasAttribute(`data-i18n-original-${attr}`)) {
+                        element.setAttribute(`data-i18n-original-${attr}`, element.getAttribute(attr));
+                    }
+                    element.setAttribute(attr, translations[lang][key]);
+                }
+            }
+        });
+    });
+
+    // Handle special cases like selects
+    const businessType = document.getElementById('business-type');
+    if (businessType) {
+        // Save selected value
+        const selectedValue = businessType.value;
+
+        // If not English, translate options
+        if (lang !== 'en') {
+            // Default option
+            const defaultOption = businessType.querySelector('option[value=""]');
+            if (defaultOption && translations[lang]['business_type_placeholder']) {
+                defaultOption.textContent = translations[lang]['business_type_placeholder'];
+            }
+
+            // Other options
+            const optionKeys = ['supermarket', 'restaurant', 'pharmacy', 'technician', 'provider', 'other'];
+            optionKeys.forEach(key => {
+                const option = businessType.querySelector(`option[value="${key}"]`);
+                if (option && translations[lang][key]) {
+                    option.textContent = translations[lang][key];
+                }
+            });
+        }
+        // If English, restore original options
+        else {
+            // Restore from data attributes if they exist
+            businessType.querySelectorAll('option').forEach(option => {
+                if (option.hasAttribute('data-i18n-original')) {
+                    option.textContent = option.getAttribute('data-i18n-original');
+                }
+            });
+        }
+
+        // Restore selected value
+        businessType.value = selectedValue;
+    }
+
+    // Update form error messages if present
+    const errorMappings = {
+        'name-error': 'error_name',
+        'email-error': 'error_email',
+        'phone-error': 'error_phone',
+        'business-type-error': 'error_business_type'
+    };
+
+    for (const [id, key] of Object.entries(errorMappings)) {
+        const element = document.getElementById(id);
+        if (element && element.textContent) {
+            if (lang === 'en') {
+                // Restore original English error message if stored
+                if (element.hasAttribute('data-i18n-original')) {
+                    element.textContent = element.getAttribute('data-i18n-original');
+                }
+            } else if (translations[lang] && translations[lang][key]) {
+                // Store original English message if not already stored
+                if (!element.hasAttribute('data-i18n-original')) {
+                    element.setAttribute('data-i18n-original', element.textContent);
+                }
+                element.textContent = translations[lang][key];
+            }
+        }
+    }
+
+    // Update the language toggle button
     const languageToggle = document.getElementById('language-toggle');
     if (languageToggle) {
         languageToggle.textContent = lang === 'es' ? 'EN' : 'ES';
     }
 }
 
-// Función para obtener traducción de una clave
-function getTranslation(key, lang) {
-    return translations[lang][key] || key;
-}
-
-// Función para actualizar todos los contenidos de la página
-function updateContent(lang) {
-    // Actualizar los elementos con atributo data-i18n
-    document.querySelectorAll('[data-i18n]').forEach(element => {
-        const key = element.getAttribute('data-i18n');
-        if (translations[lang][key]) {
-            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-                element.placeholder = translations[lang][key];
-            } else {
-                element.textContent = translations[lang][key];
-            }
-        }
-    });
-
-    // Actualizar atributos especiales como title, alt, etc.
-    document.querySelectorAll('[data-i18n-attr]').forEach(element => {
-        const data = element.getAttribute('data-i18n-attr').split(',');
-        data.forEach(item => {
-            const [attr, key] = item.split(':');
-            if (attr && key && translations[lang][key]) {
-                element.setAttribute(attr, translations[lang][key]);
-            }
-        });
-    });
-
-    // Manejar casos especiales como selects
-    const tipoNegocio = document.getElementById('tipo-negocio');
-    if (tipoNegocio) {
-        // Guardar valor seleccionado
-        const selectedValue = tipoNegocio.value;
-
-        // Actualizar option por defecto
-        const defaultOption = tipoNegocio.querySelector('option[value=""]');
-        if (defaultOption) {
-            defaultOption.textContent = translations[lang]['tipo_negocio_placeholder'];
-        }
-
-        // Actualizar resto de opciones
-        const optionKeys = ['supermercado', 'restaurante', 'farmacia', 'tecnico', 'proveedor', 'otro'];
-        optionKeys.forEach(key => {
-            const option = tipoNegocio.querySelector(`option[value="${key}"]`);
-            if (option) {
-                option.textContent = translations[lang][key];
-            }
-        });
-
-        // Restaurar valor seleccionado
-        tipoNegocio.value = selectedValue;
-    }
-
-    // Actualizar mensajes de error del formulario
-    const errorMessages = {
-        'nombre-error': 'error_nombre',
-        'email-error': 'error_email',
-        'telefono-error': 'error_telefono',
-        'tipo-negocio-error': 'error_tipo_negocio'
-    };
-
-    for (const [id, key] of Object.entries(errorMessages)) {
-        const element = document.getElementById(id);
-        if (element && element.textContent) {
-            element.textContent = translations[lang][key];
-        }
-    }
-}
-
-// Función para agregar atributos data-i18n dinámicamente
+// Function to add data-i18n attributes dynamically
 function addTranslationAttributes() {
-    // Navegación
+    // Navigation
     const navItems = {
-        'Inicio': 'inicio',
-        'Funcionalidades': 'funcionalidades',
-        'Beneficios': 'beneficios',
-        'Nosotros': 'nosotros',
-        'Contacto': 'contacto'
+        'Home': 'home',
+        'Features': 'features',
+        'Benefits': 'benefits',
+        'About us': 'about_us',
+        'Contact': 'contact'
     };
 
     document.querySelectorAll('.nav-menu a').forEach(item => {
@@ -358,19 +285,19 @@ function addTranslationAttributes() {
         }
     });
 
-    // CTA botón
+    // CTA button
     document.querySelectorAll('.btn').forEach(btn => {
         const text = btn.textContent.trim();
-        if (text === 'Solicitar Demo') {
-            btn.setAttribute('data-i18n', 'solicitar_demo');
-        } else if (text === 'Solicitar Demo Gratis') {
-            btn.setAttribute('data-i18n', 'demo_gratis');
-        } else if (text === '¿Cómo funciona?') {
-            btn.setAttribute('data-i18n', 'como_funciona');
-        } else if (text === 'Aceptar') {
-            btn.setAttribute('data-i18n', 'aceptar');
-        } else if (text === 'Rechazar') {
-            btn.setAttribute('data-i18n', 'rechazar');
+        if (text === 'Request Demo') {
+            btn.setAttribute('data-i18n', 'request_demo');
+        } else if (text === 'Request Free Demo') {
+            btn.setAttribute('data-i18n', 'free_demo');
+        } else if (text === 'How does it work?') {
+            btn.setAttribute('data-i18n', 'how_it_works');
+        } else if (text === 'Accept') {
+            btn.setAttribute('data-i18n', 'accept');
+        } else if (text === 'Decline') {
+            btn.setAttribute('data-i18n', 'decline');
         }
     });
 
@@ -381,19 +308,19 @@ function addTranslationAttributes() {
     const heroSubtitle = document.querySelector('.hero-content p');
     if (heroSubtitle) heroSubtitle.setAttribute('data-i18n', 'hero_subtitle');
 
-    // Confían en nosotros
-    const confianText = document.querySelector('.hero-clients p');
-    if (confianText) confianText.setAttribute('data-i18n', 'confian');
+    // Trust us
+    const trustText = document.querySelector('.hero-clients p');
+    if (trustText) trustText.setAttribute('data-i18n', 'trust_us');
 
-    // Para quién section
-    const paraQuienTitle = document.querySelector('#para-quien .section-title');
-    if (paraQuienTitle) paraQuienTitle.setAttribute('data-i18n', 'para_quien');
+    // For whom section
+    const forWhomTitle = document.querySelector('#for-whom .section-title');
+    if (forWhomTitle) forWhomTitle.setAttribute('data-i18n', 'for_whom');
 
-    // Cards para quién
+    // For whom cards
     const cardTitles = {
-        'Negocios con Equipos de Frío': 'negocios_frio',
-        'Técnicos Especializados': 'tecnicos',
-        'Proveedores de Equipos': 'proveedores'
+        'Businesses with Cold Equipment': 'businesses_cold',
+        'Specialized Technicians': 'technicians',
+        'Equipment Suppliers': 'suppliers'
     };
 
     document.querySelectorAll('.card h3').forEach(title => {
@@ -401,7 +328,7 @@ function addTranslationAttributes() {
         if (cardTitles[text]) {
             title.setAttribute('data-i18n', cardTitles[text]);
 
-            // También el párrafo correspondiente
+            // Also corresponding paragraph
             const description = title.nextElementSibling;
             if (description && description.tagName === 'P') {
                 description.setAttribute('data-i18n', cardTitles[text] + '_desc');
@@ -409,18 +336,18 @@ function addTranslationAttributes() {
         }
     });
 
-    // Funcionalidades section
-    const funcionalidadesTitle = document.querySelector('#funcionalidades .section-title');
-    if (funcionalidadesTitle) funcionalidadesTitle.setAttribute('data-i18n', 'funcionalidades_title');
+    // Features section
+    const featuresTitle = document.querySelector('#features .section-title');
+    if (featuresTitle) featuresTitle.setAttribute('data-i18n', 'features_title');
 
     // Features
     const featureTitles = {
-        'Monitoreo en Tiempo Real': 'monitoreo_title',
-        'Reportes Técnicos': 'reportes_title',
-        'Alertas Automatizadas': 'alertas_title',
-        'Historial de Rendimiento': 'historial_title',
-        'Mantenimiento Programado': 'mantenimiento_title',
-        'Conexión con Técnicos': 'conexion_title'
+        'Real-Time Monitoring': 'monitoring_title',
+        'Technical Reports': 'reports_title',
+        'Automated Alerts': 'alerts_title',
+        'Performance History': 'history_title',
+        'Scheduled Maintenance': 'maintenance_title',
+        'Connection with Technicians': 'connection_title'
     };
 
     document.querySelectorAll('.feature h3').forEach(title => {
@@ -428,7 +355,7 @@ function addTranslationAttributes() {
         if (featureTitles[text]) {
             title.setAttribute('data-i18n', featureTitles[text]);
 
-            // También el párrafo correspondiente
+            // Also corresponding paragraph
             const description = title.nextElementSibling;
             if (description && description.tagName === 'P') {
                 description.setAttribute('data-i18n', featureTitles[text].replace('_title', '_desc'));
@@ -436,59 +363,59 @@ function addTranslationAttributes() {
         }
     });
 
-    // Beneficios section
-    const beneficiosTitle = document.querySelector('#beneficios .section-title');
-    if (beneficiosTitle) beneficiosTitle.setAttribute('data-i18n', 'beneficios_title');
+    // Benefits section
+    const benefitsTitle = document.querySelector('#benefits .section-title');
+    if (benefitsTitle) benefitsTitle.setAttribute('data-i18n', 'benefits_title');
 
-    // Tabs de beneficios
+    // Benefits tabs
     document.querySelectorAll('.tab-btn').forEach(tab => {
         const text = tab.textContent.trim();
-        if (text === 'Para Negocios') {
-            tab.setAttribute('data-i18n', 'para_negocios');
-        } else if (text === 'Para Técnicos') {
-            tab.setAttribute('data-i18n', 'para_tecnicos');
+        if (text === 'For Business') {
+            tab.setAttribute('data-i18n', 'for_businesses');
+        } else if (text === 'For Companies') {
+            tab.setAttribute('data-i18n', 'for_technicians');
         }
     });
 
-    // Lista de beneficios
-    const beneficiosNegocios = [
-        'beneficio1_negocios',
-        'beneficio2_negocios',
-        'beneficio3_negocios',
-        'beneficio4_negocios',
-        'beneficio5_negocios'
+    // Benefits list
+    const businessBenefits = [
+        'benefit1_businesses',
+        'benefit2_businesses',
+        'benefit3_businesses',
+        'benefit4_businesses',
+        'benefit5_businesses'
     ];
 
-    const beneficiosTecnicos = [
-        'beneficio1_tecnicos',
-        'beneficio2_tecnicos',
-        'beneficio3_tecnicos',
-        'beneficio4_tecnicos',
-        'beneficio5_tecnicos'
+    const technicianBenefits = [
+        'benefit1_technicians',
+        'benefit2_technicians',
+        'benefit3_technicians',
+        'benefit4_technicians',
+        'benefit5_technicians'
     ];
 
     document.querySelectorAll('#negocios .benefit-item p').forEach((item, index) => {
-        if (index < beneficiosNegocios.length) {
-            item.setAttribute('data-i18n', beneficiosNegocios[index]);
+        if (index < businessBenefits.length) {
+            item.setAttribute('data-i18n', businessBenefits[index]);
         }
     });
 
     document.querySelectorAll('#tecnicos .benefit-item p').forEach((item, index) => {
-        if (index < beneficiosTecnicos.length) {
-            item.setAttribute('data-i18n', beneficiosTecnicos[index]);
+        if (index < technicianBenefits.length) {
+            item.setAttribute('data-i18n', technicianBenefits[index]);
         }
     });
 
-    // Nosotros section
-    const nosotrosTitle = document.querySelector('#nosotros .section-title');
-    if (nosotrosTitle) nosotrosTitle.setAttribute('data-i18n', 'nosotros_title');
+    // About us section
+    const aboutUsTitle = document.querySelector('#about-us .section-title');
+    if (aboutUsTitle) aboutUsTitle.setAttribute('data-i18n', 'about_us_title');
 
-    // Misión y Visión
-    const misionTitle = document.querySelector('.mission h3');
-    if (misionTitle) misionTitle.setAttribute('data-i18n', 'mision_title');
+    // Mission and Vision
+    const missionTitle = document.querySelector('.mission h3');
+    if (missionTitle) missionTitle.setAttribute('data-i18n', 'mission_title');
 
-    const misionDesc = document.querySelector('.mission p');
-    if (misionDesc) misionDesc.setAttribute('data-i18n', 'mision_desc');
+    const missionDesc = document.querySelector('.mission p');
+    if (missionDesc) missionDesc.setAttribute('data-i18n', 'mission_desc');
 
     const visionTitle = document.querySelector('.vision h3');
     if (visionTitle) visionTitle.setAttribute('data-i18n', 'vision_title');
@@ -496,72 +423,72 @@ function addTranslationAttributes() {
     const visionDesc = document.querySelector('.vision p');
     if (visionDesc) visionDesc.setAttribute('data-i18n', 'vision_desc');
 
-    // Cómo funciona section
-    const comoFuncionaTitle = document.querySelector('#como-funciona .section-title');
-    if (comoFuncionaTitle) comoFuncionaTitle.setAttribute('data-i18n', 'como_funciona_title');
+    // How it works section
+    const howItWorksTitle = document.querySelector('#how-it-works .section-title');
+    if (howItWorksTitle) howItWorksTitle.setAttribute('data-i18n', 'how_it_works_title');
 
-    // Pasos
-    const pasosTitles = [
-        'paso1_title',
-        'paso2_title',
-        'paso3_title',
-        'paso4_title'
+    // Steps
+    const stepTitles = [
+        'step1_title',
+        'step2_title',
+        'step3_title',
+        'step4_title'
     ];
 
-    const pasosDesc = [
-        'paso1_desc',
-        'paso2_desc',
-        'paso3_desc',
-        'paso4_desc'
+    const stepDescs = [
+        'step1_desc',
+        'step2_desc',
+        'step3_desc',
+        'step4_desc'
     ];
 
     document.querySelectorAll('.step-content h3').forEach((title, index) => {
-        if (index < pasosTitles.length) {
-            title.setAttribute('data-i18n', pasosTitles[index]);
+        if (index < stepTitles.length) {
+            title.setAttribute('data-i18n', stepTitles[index]);
         }
     });
 
     document.querySelectorAll('.step-content p').forEach((desc, index) => {
-        if (index < pasosDesc.length) {
-            desc.setAttribute('data-i18n', pasosDesc[index]);
+        if (index < stepDescs.length) {
+            desc.setAttribute('data-i18n', stepDescs[index]);
         }
     });
 
-    // Testimonios
-    const testimoniosTitle = document.querySelector('.testimonials .section-title');
-    if (testimoniosTitle) testimoniosTitle.setAttribute('data-i18n', 'testimonios_title');
+    // Testimonials
+    const testimonialsTitle = document.querySelector('.testimonials .section-title');
+    if (testimonialsTitle) testimonialsTitle.setAttribute('data-i18n', 'testimonials_title');
 
-    // Sección CTA
+    // CTA Section
     const ctaTitle = document.querySelector('.cta-content h2');
     if (ctaTitle) ctaTitle.setAttribute('data-i18n', 'cta_title');
 
     const ctaSubtitle = document.querySelector('.cta-content > p');
     if (ctaSubtitle) ctaSubtitle.setAttribute('data-i18n', 'cta_subtitle');
 
-    // Formulario
-    const nombre = document.getElementById('nombre');
-    if (nombre) nombre.setAttribute('data-i18n', 'nombre');
+    // Form
+    const name = document.getElementById('name');
+    if (name) name.setAttribute('data-i18n', 'full_name');
 
     const email = document.getElementById('email');
-    if (email) email.setAttribute('data-i18n', 'correo');
+    if (email) email.setAttribute('data-i18n', 'email');
 
-    const telefono = document.getElementById('telefono');
-    if (telefono) telefono.setAttribute('data-i18n', 'telefono');
+    const phone = document.getElementById('phone');
+    if (phone) phone.setAttribute('data-i18n', 'phone');
 
-    // Mensaje de éxito del formulario
+    // Form success message
     const formSuccess = document.querySelector('.form-success p');
     if (formSuccess) formSuccess.setAttribute('data-i18n', 'form_success');
 
     // Footer
-    const gestionInteligente = document.querySelector('.footer-logo p');
-    if (gestionInteligente) gestionInteligente.setAttribute('data-i18n', 'gestion_inteligente');
+    const smartManagement = document.querySelector('.footer-logo p');
+    if (smartManagement) smartManagement.setAttribute('data-i18n', 'smart_management');
 
-    // Columnas del footer
+    // Footer columns
     const footerTitles = {
-        'Empresa': 'empresa',
-        'Soluciones': 'soluciones',
-        'Soporte': 'soporte',
-        'Contacto': 'contacto_footer'
+        'Company': 'company',
+        'Solutions': 'solutions',
+        'Support': 'support',
+        'Contact': 'contact_footer'
     };
 
     document.querySelectorAll('.footer-column h4').forEach(title => {
@@ -571,22 +498,22 @@ function addTranslationAttributes() {
         }
     });
 
-    // Links del footer
+    // Footer links
     const footerLinks = {
-        'Sobre nosotros': 'sobre_nosotros',
-        'Nuestro equipo': 'nuestro_equipo',
+        'About us': 'about_us_footer',
+        'Our team': 'our_team',
         'Blog': 'blog',
-        'Prensa': 'prensa',
-        'Para negocios': 'para_negocios_footer',
-        'Para técnicos': 'para_tecnicos_footer',
-        'Para proveedores': 'para_proveedores',
-        'Precios': 'precios',
-        'Centro de ayuda': 'ayuda',
-        'Tutoriales': 'tutoriales',
-        'Preguntas frecuentes': 'faq',
-        'Términos y condiciones': 'terminos',
-        'Política de privacidad': 'privacidad',
-        'Política de cookies': 'cookies'
+        'Press': 'press',
+        'For businesses': 'for_businesses_footer',
+        'For technicians': 'for_technicians_footer',
+        'For suppliers': 'for_suppliers',
+        'Pricing': 'pricing',
+        'Help center': 'help_center',
+        'Tutorials': 'tutorials',
+        'FAQ': 'faq',
+        'Terms and conditions': 'terms',
+        'Privacy policy': 'privacy',
+        'Cookie policy': 'cookies_policy'
     };
 
     document.querySelectorAll('.footer-column a, .legal-links a').forEach(link => {
@@ -599,7 +526,7 @@ function addTranslationAttributes() {
     // Back to top button
     const backToTopBtn = document.getElementById('back-to-top');
     if (backToTopBtn) {
-        backToTopBtn.setAttribute('data-i18n-attr', 'aria-label:volver_arriba');
+        backToTopBtn.setAttribute('data-i18n-attr', 'aria-label:back_to_top');
     }
 
     // Copyright
@@ -608,19 +535,19 @@ function addTranslationAttributes() {
         const yearMatch = copyright.textContent.match(/\d{4}/);
         if (yearMatch) {
             const year = yearMatch[0];
-            copyright.innerHTML = `&copy; ${year} OsitoPolar. <span data-i18n="derechos">Todos los derechos reservados.</span>`;
+            copyright.innerHTML = `&copy; ${year} OsitoPolar. <span data-i18n="rights_reserved">All rights reserved.</span>`;
         }
     }
 
     // Cookie consent
     const cookieMessage = document.querySelector('.cookie-consent p');
     if (cookieMessage) {
-        cookieMessage.innerHTML = `<span data-i18n="cookies_mensaje">Utilizamos cookies para mejorar tu experiencia en nuestro sitio web.</span> <a href="#cookies" data-i18n="mas_info">Más información</a>`;
+        cookieMessage.innerHTML = `<span data-i18n="cookies_message">We use cookies to improve your experience on our website.</span> <a href="#cookies" data-i18n="more_info">More information</a>`;
     }
 
     const cookieAccept = document.getElementById('cookie-accept');
-    if (cookieAccept) cookieAccept.setAttribute('data-i18n', 'aceptar');
+    if (cookieAccept) cookieAccept.setAttribute('data-i18n', 'accept');
 
     const cookieDecline = document.getElementById('cookie-decline');
-    if (cookieDecline) cookieDecline.setAttribute('data-i18n', 'rechazar');
+    if (cookieDecline) cookieDecline.setAttribute('data-i18n', 'decline');
 }

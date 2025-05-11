@@ -4,11 +4,11 @@
         script.src = 'languages.js';
         script.async = true;
         script.onload = () => {
-            console.log('Archivo de idiomas cargado correctamente');
+            console.log('Language file loaded successfully');
             resolve();
         };
         script.onerror = () => {
-            console.error('Error al cargar el archivo de idiomas');
+            console.error('Error loading language file');
             reject();
         };
         document.body.appendChild(script);
@@ -18,35 +18,37 @@
 document.addEventListener('DOMContentLoaded', async function () {
     try {
         await loadLanguageScript();
-        // Solo ejecutar la inicialización del idioma después de cargar el script
-        if (typeof addTranslationAttributes === 'function' && typeof updateContent === 'function') {
-            // Detectar idioma guardado o establecer español por defecto
-            let currentLang = localStorage.getItem('language') || 'es';
+        // Only initialize language after script is loaded
+        if (typeof addTranslationAttributes === 'function' && typeof changeLanguage === 'function') {
+            // Default language is English per requirements
+            let currentLang = localStorage.getItem('language') || 'en';
 
-            // Inicializar botón de idioma
+            // Add data-i18n attributes to elements that need translation
+            addTranslationAttributes();
+
+            // If saved language is not English, apply translations
+            if (currentLang !== 'en') {
+                changeLanguage(currentLang);
+            }
+
+            // Initialize language toggle button
             const languageToggle = document.getElementById('language-toggle');
             if (languageToggle) {
-                languageToggle.textContent = currentLang === 'es' ? 'EN' : 'ES';
+                languageToggle.textContent = currentLang === 'en' ? 'ES' : 'EN';
 
-                // Agregar evento para cambiar idioma
+                // Add event to change language
                 languageToggle.addEventListener('click', function () {
                     const newLang = localStorage.getItem('language') === 'en' ? 'es' : 'en';
                     changeLanguage(newLang);
                 });
             }
 
-            // Añadir atributos data-i18n a los elementos que necesitan traducción
-            addTranslationAttributes();
-
-            // Actualizar contenido inicial
-            updateContent(currentLang);
-
-            console.log('Inicialización de idioma completada');
+            console.log('Language initialization completed');
         } else {
-            console.error('Las funciones de traducción no están disponibles');
+            console.error('Translation functions are not available');
         }
     } catch (error) {
-        console.error('Error en la inicialización de idiomas:', error);
+        console.error('Error in language initialization:', error);
     }
 
     // Mobile Menu Toggle
@@ -73,7 +75,7 @@ document.addEventListener('DOMContentLoaded', async function () {
 
     // Close mobile menu when clicking outside
     document.addEventListener('click', function (event) {
-        if (navMenu.classList.contains('active') &&
+        if (navMenu && navMenu.classList.contains('active') &&
             !event.target.closest('.nav-menu') &&
             !event.target.closest('.mobile-menu-btn')) {
             navMenu.classList.remove('active');
@@ -153,6 +155,9 @@ document.addEventListener('DOMContentLoaded', async function () {
         }
     }, 8000);
 
+    // Set current year in footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+
     // Form validation
     const demoForm = document.getElementById('demo-form');
     const formSuccess = document.getElementById('form-success');
@@ -163,36 +168,36 @@ document.addEventListener('DOMContentLoaded', async function () {
 
             // Simple validation
             let isValid = true;
-            const nombre = document.getElementById('nombre');
+            const name = document.getElementById('name');
             const email = document.getElementById('email');
-            const telefono = document.getElementById('telefono');
-            const tipoNegocio = document.getElementById('tipo-negocio');
+            const phone = document.getElementById('phone');
+            const businessType = document.getElementById('business-type');
 
             // Reset error messages
             document.querySelectorAll('.form-error').forEach(error => error.textContent = '');
 
             // Validate name
-            if (nombre.value.trim() === '') {
-                document.getElementById('nombre-error').textContent = 'Por favor, ingresa tu nombre';
+            if (name.value.trim() === '') {
+                document.getElementById('name-error').textContent = 'Please enter your name';
                 isValid = false;
             }
 
             // Validate email
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(email.value)) {
-                document.getElementById('email-error').textContent = 'Por favor, ingresa un email válido';
+                document.getElementById('email-error').textContent = 'Please enter a valid email';
                 isValid = false;
             }
 
             // Validate phone
-            if (telefono.value.trim() === '') {
-                document.getElementById('telefono-error').textContent = 'Por favor, ingresa tu teléfono';
+            if (phone.value.trim() === '') {
+                document.getElementById('phone-error').textContent = 'Please enter your phone number';
                 isValid = false;
             }
 
             // Validate business type
-            if (tipoNegocio.value === '') {
-                document.getElementById('tipo-negocio-error').textContent = 'Por favor, selecciona tu tipo de negocio';
+            if (businessType.value === '') {
+                document.getElementById('business-type-error').textContent = 'Please select your business type';
                 isValid = false;
             }
 
@@ -273,7 +278,7 @@ document.addEventListener('DOMContentLoaded', async function () {
                     });
 
                     // Close mobile menu if open
-                    if (navMenu.classList.contains('active')) {
+                    if (navMenu && navMenu.classList.contains('active')) {
                         navMenu.classList.remove('active');
 
                         const spans = mobileMenuBtn.querySelectorAll('span');
