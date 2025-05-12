@@ -344,24 +344,29 @@
 </section>
 
 <!-- CTA Section -->
+
 <section id="demo" class="cta-section">
     <div class="container">
         <div class="cta-content">
             <h2>Ready to optimize the management of your refrigeration equipment?</h2>
             <p>Request a free demonstration and discover how OsitoPolar can transform your business.</p>
+
             <form id="demo-form" class="demo-form">
                 <div class="form-group">
-                    <input type="text" id="name" name="name" placeholder="Full name" required>
+                    <input type="text" id="name" name="name" placeholder="Full name" required autocomplete="name">
                     <span class="form-error" id="name-error"></span>
                 </div>
+
                 <div class="form-group">
-                    <input type="email" id="email" name="email" placeholder="Email" required>
+                    <input type="email" id="email" name="email" placeholder="Email" required autocomplete="email">
                     <span class="form-error" id="email-error"></span>
                 </div>
+
                 <div class="form-group">
-                    <input type="tel" id="phone" name="phone" placeholder="Phone" required>
+                    <input type="tel" id="phone" name="phone" placeholder="Phone" required autocomplete="tel">
                     <span class="form-error" id="phone-error"></span>
                 </div>
+
                 <div class="form-group">
                     <select id="business-type" name="business-type" required>
                         <option value="" disabled selected>Business type</option>
@@ -374,8 +379,10 @@
                     </select>
                     <span class="form-error" id="business-type-error"></span>
                 </div>
+
                 <button type="submit" class="btn btn-primary btn-large">Request Demo</button>
             </form>
+
             <div id="form-success" class="form-success hidden">
                 <i class="fas fa-check-circle"></i>
                 <p>Thank you for your interest! We will contact you soon to coordinate your demonstration.</p>
@@ -389,7 +396,6 @@
     <div class="container">
         <div class="footer-content">
             <div class="footer-logo">
-                <img src="logo.png" alt="OsitoPolar Logo">
                 <h3>OsitoPolar</h3>
                 <p>Intelligent management of refrigeration equipment</p>
             </div>

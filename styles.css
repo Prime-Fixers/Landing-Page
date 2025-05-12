@@ -1040,3 +1040,142 @@ footer {
         flex-direction: column;
     }
 }
+
+
+/* Responsive Form Fixes */
+
+/* Base form styling - refined for all screen sizes */
+.demo-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    text-align: left;
+    max-width: 100%;
+}
+
+.form-group {
+    position: relative;
+    width: 100%;
+}
+
+.form-group:nth-child(3),
+.form-group:nth-child(4),
+.demo-form button {
+    grid-column: span 2;
+}
+
+/* Enhanced input and select styling with better mobile compatibility */
+.demo-form input,
+.demo-form select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: var(--border-radius);
+    color: white;
+    font-size: 1rem;
+    transition: var(--transition);
+    -webkit-appearance: none; /* Critical for iOS */
+    -moz-appearance: none;
+    appearance: none;
+    box-sizing: border-box;
+}
+
+/* Special styling for select elements */
+.demo-form select {
+    cursor: pointer;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 16px;
+    padding-right: 40px; /* Make room for the dropdown arrow */
+}
+
+/* For Firefox - ensures consistent appearance */
+@-moz-document url-prefix() {
+    .demo-form select {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: white;
+    }
+}
+
+/* Styling for dropdown options */
+.demo-form select option {
+    background-color: var(--bg-dark);
+    color: white;
+    padding: 12px;
+}
+
+/* First option (placeholder) styling */
+.demo-form select option:first-of-type {
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.demo-form input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Focus states */
+.demo-form input:focus,
+.demo-form select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(0, 120, 215, 0.3);
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.form-error {
+    color: var(--error-color);
+    font-size: 0.85rem;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+    .demo-form {
+        grid-template-columns: 1fr;
+        gap: 25px; /* Increased gap for better touch targets */
+    }
+
+    .form-group:nth-child(3),
+    .form-group:nth-child(4),
+    .demo-form button {
+        grid-column: span 1;
+    }
+
+    .demo-form input,
+    .demo-form select {
+        padding: 14px 15px; /* Larger touch targets */
+        font-size: 16px; /* Prevent iOS zoom on focus */
+    }
+
+    /* Adjust error message position for stacked layout */
+    .form-error {
+        bottom: -18px;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+    .demo-form {
+        gap: 30px; /* Even more spacing for very small screens */
+    }
+
+    .cta-content h2 {
+        font-size: 1.8rem; /* Smaller title on tiny screens */
+    }
+
+    .cta-content p {
+        font-size: 1rem;
+    }
+}
+
+@supports (-webkit-touch-callout: none) {
+    .demo-form select {
+        background-color: rgba(26, 43, 71, 0.8); /* Darker background for iOS */
+        border-color: rgba(255, 255, 255, 0.3); /* More visible border */
+    }
+}
