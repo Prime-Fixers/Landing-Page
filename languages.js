@@ -147,6 +147,16 @@ const translations = {
         // Testimonials Section
         'testimonials_title': 'Lo que dicen nuestros clientes',
 
+        'testimonial_1': '"Desde que implementamos OsitoPolar, hemos reducido las pérdidas por fallas en nuestros equipos de refrigeración en un 40%. El sistema de alertas nos ha salvado varias veces de perder inventario valioso."',
+        'testimonial_2': '"Como técnico especializado, OsitoPolar ha revolucionado mi forma de trabajar con mi Empresa. Ahora puedo ver el historial completo de cada equipo antes de visitarlo y generar informes profesionales en minutos."',
+        'testimonial_3': '"La tranquilidad que proporciona saber que nuestros equipos están siendo monitoreados 24/7 no tiene precio. Además, hemos notado ahorros significativos en nuestro consumo de electricidad gracias a las recomendaciones del sistema."',
+
+        'testimonial_position_1': 'Gerente de Operaciones, Supermercados ABC',
+        'testimonial_position_2': 'Técnica de Refrigeración Industrial',
+        'testimonial_position_3': 'Propietario, Restaurante El Glaciar',
+
+        'prev_testimonial': 'Testimonio anterior',
+        'next_testimonial': 'Siguiente testimonio',
         // CTA Section
         'cta_title': '¿Listo para optimizar la gestión de tus equipos de refrigeración?',
         'cta_subtitle': 'Solicita una demostración gratuita y descubre cómo OsitoPolar puede transformar tu negocio.',
@@ -669,7 +679,23 @@ function addTranslationAttributes() {
     // Testimonials
     const testimonialsTitle = document.querySelector('.testimonials .section-title');
     if (testimonialsTitle) testimonialsTitle.setAttribute('data-i18n', 'testimonials_title');
+    document.querySelectorAll('.testimonial-content > p').forEach((testimonial, index) => {
+        testimonial.setAttribute('data-i18n', `testimonial_${index + 1}`);
+    });
 
+    document.querySelectorAll('.testimonial-author div p').forEach((position, index) => {
+        position.setAttribute('data-i18n', `testimonial_position_${index + 1}`);
+    });
+
+    const prevBtn = document.querySelector('.prev-btn');
+    if (prevBtn) {
+        prevBtn.setAttribute('data-i18n-attr', 'aria-label:prev_testimonial');
+    }
+
+    const nextBtn = document.querySelector('.next-btn');
+    if (nextBtn) {
+        nextBtn.setAttribute('data-i18n-attr', 'aria-label:next_testimonial');
+    }
     // CTA Section
     const ctaTitle = document.querySelector('.cta-content h2');
     if (ctaTitle) ctaTitle.setAttribute('data-i18n', 'cta_title');
