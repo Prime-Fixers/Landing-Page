@@ -12,7 +12,7 @@ const translations = {
         // Hero Section
         'hero_title': 'Gestión Inteligente de Equipos de Refrigeración',
         'hero_subtitle': 'Conectamos negocios con técnicos especializados para un mantenimiento preventivo y automatizado de sistemas de congelación.',
-        'free_demo': 'Solicitar Demo Gratis',
+        'free_demo': 'Pruebalo ahora',
         'how_it_works': '¿Cómo funciona?',
         'trust_us': 'Confían en nosotros:',
 
@@ -72,7 +72,78 @@ const translations = {
         'step3_desc': 'Te notificamos ante cualquier anomalía o necesidad de mantenimiento.',
         'step4_title': 'Contacto con técnicos',
         'step4_desc': 'Conectamos automáticamente con especialistas disponibles en tu zona.',
+        // Pricing Plans
+        'pricing_title':             'Precios',
+        'pricing_tab_users':         'Para Usuarios',
+        'pricing_tab_providers':     'Para Proveedores',
 
+// Plan Titles - Users
+        'plan_basic_title':          'Básico (Osito Polar)',
+        'plan_basic_price':          'S/. 69.99 (USD $18.99)/mes',
+        'plan_basic_subtitle':       'Hasta 3 equipos',
+
+        'plan_standard_title':       'Estándar (Osito Nevado)',
+        'plan_standard_price':       'S/. 129.99 (USD $35.13)/mes',
+        'plan_standard_subtitle':    'Hasta 8 equipos',
+
+        'plan_premium_title':        'Premium (Osito Glacial)',
+        'plan_premium_price':        'S/. 249.99 (USD $67.56)/mes',
+        'plan_premium_subtitle':     'Hasta 20 equipos',
+
+        // Plan Titles - Providers
+        'plan_small_title':          'Pequeña Empresa',
+        'plan_small_price':          'S/. 149.99 (USD $40.51)/mes',
+        'plan_small_subtitle':       'Hasta 10 clientes',
+
+        'plan_medium_title':         'Mediana Empresa',
+        'plan_medium_price':         'S/. 299.99 (USD $81.08)/mes',
+        'plan_medium_subtitle':      'Hasta 30 clientes',
+
+        'plan_enterprise_title':     'Enterprise Premium',
+        'plan_enterprise_price':     'S/. 599.99 (USD $162.16)/mes',
+        'plan_enterprise_subtitle':  'Clientes ilimitados',
+// Características del plan Básico
+        'basic_feature_1': 'Monitoreo de temperatura en tiempo real',
+        'basic_feature_2': 'Alertas por email de fallas críticas',
+        'basic_feature_3': 'Control remoto de encendido/apagado',
+        'basic_feature_4': 'Registro de historial de mantenimiento',
+        'basic_feature_5': 'Soporte por email',
+
+// Características del plan Estándar
+        'standard_feature_1': 'Todo lo incluido en Básico',
+        'standard_feature_2': 'Monitoreo avanzado (energía, uso)',
+        'standard_feature_3': 'Ajuste remoto de temperatura',
+        'standard_feature_4': 'Informes mensuales de energía',
+        'standard_feature_5': 'Mantenimiento programado',
+
+// Características del plan Premium
+        'premium_feature_1': 'Todo lo incluido en Estándar',
+        'premium_feature_2': 'Monitoreo completo (temp, energía, tiempo de funcionamiento)',
+        'premium_feature_3': 'Mantenimiento preventivo auto-programado',
+        'premium_feature_4': 'Panel de análisis exclusivo',
+
+// Características del plan Pequeña Empresa
+        'small_feature_1': 'Gestión de clientes y unidades',
+        'small_feature_2': 'Programación de visitas técnicas',
+        'small_feature_3': 'Informes técnicos básicos',
+        'small_feature_4': 'Notificaciones de fallas de clientes',
+        'small_feature_5': 'Registro de historial de servicio',
+        'small_feature_6': 'Soporte por email',
+
+// Características del plan Mediana Empresa
+        'medium_feature_1': 'Todo lo incluido en Pequeña Empresa',
+        'medium_feature_2': 'Informes técnicos detallados',
+        'medium_feature_3': 'Métricas de rendimiento técnico',
+        'medium_feature_4': 'Encuestas de satisfacción de clientes',
+        'medium_feature_5': 'Panel de servicio',
+        'medium_feature_6': 'Soporte prioritario',
+
+// Características del plan Enterprise
+        'enterprise_feature_1': 'Todo lo incluido en Mediana Empresa',
+        'enterprise_feature_2': 'Panel de administración avanzado',
+        'enterprise_feature_3': 'Alertas de mantenimiento predictivo',
+        'enterprise_feature_4': 'Exportación de datos históricos',
+        'enterprise_feature_5': 'Informes personalizados y marca personalizada',
         // Testimonials Section
         'testimonials_title': 'Lo que dicen nuestros clientes',
 
@@ -405,7 +476,148 @@ function addTranslationAttributes() {
             item.setAttribute('data-i18n', technicianBenefits[index]);
         }
     });
+    // Pricing section
+    const launchPrototypeBtn = document.querySelector('.btn.btn-secondary');
+    if (launchPrototypeBtn) launchPrototypeBtn.setAttribute('data-i18n', 'request_demo');
 
+    const tryItNowBtn = document.querySelector('.hero-cta .btn-primary');
+    if (tryItNowBtn) tryItNowBtn.setAttribute('data-i18n', 'free_demo');
+
+    // Pricing plan tabs - use the most specific selector possible
+    const userTab = document.querySelector('.pricing-tabs .tab-btn[data-target="users"]');
+    if (userTab) userTab.setAttribute('data-i18n', 'pricing_tab_users');
+
+    const providersTab = document.querySelector('.pricing-tabs .tab-btn[data-target="providers"]');
+    if (providersTab) providersTab.setAttribute('data-i18n', 'pricing_tab_providers');
+// Plan titles
+    document.querySelectorAll('.plan-card .plan-title').forEach(title => {
+        const text = title.textContent.trim();
+        if (text === 'Basic (Polar Bear)') {
+            title.setAttribute('data-i18n', 'plan_basic_title');
+        } else if (text === 'Standard (Snow Bear)') {
+            title.setAttribute('data-i18n', 'plan_standard_title');
+        } else if (text === 'Premium (Glacial Bear)') {
+            title.setAttribute('data-i18n', 'plan_premium_title');
+        } else if (text === 'Small Company') {
+            title.setAttribute('data-i18n', 'plan_small_title');
+        } else if (text === 'Medium Company') {
+            title.setAttribute('data-i18n', 'plan_medium_title');
+        } else if (text === 'Enterprise Premium') {
+            title.setAttribute('data-i18n', 'plan_enterprise_title');
+        }
+    });
+
+// Plan prices
+    document.querySelectorAll('.plan-card .plan-price').forEach(price => {
+        const titleElement = price.parentElement.querySelector('.plan-title');
+        if (titleElement) {
+            const titleText = titleElement.textContent.trim();
+            if (titleText === 'Basic (Polar Bear)') {
+                price.setAttribute('data-i18n', 'plan_basic_price');
+            } else if (titleText === 'Standard (Snow Bear)') {
+                price.setAttribute('data-i18n', 'plan_standard_price');
+            } else if (titleText === 'Premium (Glacial Bear)') {
+                price.setAttribute('data-i18n', 'plan_premium_price');
+            } else if (titleText === 'Small Company') {
+                price.setAttribute('data-i18n', 'plan_small_price');
+            } else if (titleText === 'Medium Company') {
+                price.setAttribute('data-i18n', 'plan_medium_price');
+            } else if (titleText === 'Enterprise Premium') {
+                price.setAttribute('data-i18n', 'plan_enterprise_price');
+            }
+        }
+    });
+    const planFeatures = {
+        'Real-time temperature monitoring': 'basic_feature_1',
+        'Critical-fault email alerts': 'basic_feature_2',
+        'Remote on/off control': 'basic_feature_3',
+        'Maintenance history log': 'basic_feature_4',
+        'Email support': 'basic_feature_5',
+
+        'Everything in Basic': 'standard_feature_1',
+        'Advanced monitoring (energy, usage)': 'standard_feature_2',
+        'Remote temperature adjustment': 'standard_feature_3',
+        'Monthly energy reports': 'standard_feature_4',
+        'Scheduled maintenance': 'standard_feature_5',
+
+        'Everything in Standard': 'premium_feature_1',
+        'Full monitoring (temp, energy, run-time)': 'premium_feature_2',
+        'Auto-scheduled preventive maintenance': 'premium_feature_3',
+        'Exclusive analytics dashboard': 'premium_feature_4',
+
+        'Client & unit management': 'small_feature_1',
+        'Technician visit scheduling': 'small_feature_2',
+        'Basic technical reports': 'small_feature_3',
+        'Client-fault notifications': 'small_feature_4',
+        'Service history log': 'small_feature_5',
+
+        'Everything in Small Company': 'medium_feature_1',
+        'Detailed technical reports': 'medium_feature_2',
+        'Tech performance metrics': 'medium_feature_3',
+        'Client feedback surveys': 'medium_feature_4',
+        'Service dashboard': 'medium_feature_5',
+        'Priority support': 'medium_feature_6',
+
+        'Everything in Medium Company': 'enterprise_feature_1',
+        'Advanced admin dashboard': 'enterprise_feature_2',
+        'Predictive maintenance alerts': 'enterprise_feature_3',
+        'Historical data exports': 'enterprise_feature_4',
+        'Custom reporting & branding': 'enterprise_feature_5'
+    };
+
+    document.querySelectorAll('.plan-features li').forEach(feature => {
+        const text = feature.textContent.trim();
+        if (planFeatures[text]) {
+            feature.setAttribute('data-i18n', planFeatures[text]);
+        }
+    });
+// Plan subtitles
+    document.querySelectorAll('.plan-card .plan-subtitle').forEach(subtitle => {
+        const titleElement = subtitle.parentElement.querySelector('.plan-title');
+        if (titleElement) {
+            const titleText = titleElement.textContent.trim();
+            if (titleText === 'Basic (Polar Bear)') {
+                subtitle.setAttribute('data-i18n', 'plan_basic_subtitle');
+            } else if (titleText === 'Standard (Snow Bear)') {
+                subtitle.setAttribute('data-i18n', 'plan_standard_subtitle');
+            } else if (titleText === 'Premium (Glacial Bear)') {
+                subtitle.setAttribute('data-i18n', 'plan_premium_subtitle');
+            } else if (titleText === 'Small Company') {
+                subtitle.setAttribute('data-i18n', 'plan_small_subtitle');
+            } else if (titleText === 'Medium Company') {
+                subtitle.setAttribute('data-i18n', 'plan_medium_subtitle');
+            } else if (titleText === 'Enterprise Premium') {
+                subtitle.setAttribute('data-i18n', 'plan_enterprise_subtitle');
+            }
+        }
+    });
+// Pricing title 
+    const pricingTitle = document.querySelector('#pricing .section-title');
+    if (pricingTitle) pricingTitle.setAttribute('data-i18n', 'pricing_title');
+    // Explicitly add attributes to problematic elements
+    document.querySelectorAll('.nav-menu a').forEach(item => {
+        const text = item.textContent.trim();
+        if (text === 'Home') item.setAttribute('data-i18n', 'home');
+        if (text === 'Features') item.setAttribute('data-i18n', 'features');
+        if (text === 'Benefits') item.setAttribute('data-i18n', 'benefits');
+        if (text === 'About us') item.setAttribute('data-i18n', 'about_us');
+        if (text === 'Contact') item.setAttribute('data-i18n', 'contact');
+    });
+
+
+    const launchBtn = document.querySelector('.cta-buttons .btn-secondary');
+    if (launchBtn) launchBtn.setAttribute('data-i18n', 'request_demo');
+
+
+    const tryItBtn = document.querySelector('.hero-cta .btn-primary');
+    if (tryItBtn) tryItBtn.setAttribute('data-i18n', 'free_demo');
+    if (pricingTitle) pricingTitle.setAttribute('data-i18n', 'pricing_title');
+
+    document.querySelectorAll('.pricing-tabs .tabs-header .tab-btn').forEach(tab => {
+        const text = tab.textContent.trim();
+        if (text === 'For Users') tab.setAttribute('data-i18n', 'pricing_tab_users');
+        if (text === 'For Providers') tab.setAttribute('data-i18n', 'pricing_tab_providers');
+    });
     // About us section
     const aboutUsTitle = document.querySelector('#about-us .section-title');
     if (aboutUsTitle) aboutUsTitle.setAttribute('data-i18n', 'about_us_title');
