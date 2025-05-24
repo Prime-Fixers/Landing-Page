@@ -61,6 +61,16 @@ const translations = {
         'mission_desc': 'Proporcionar una solución tecnológica inteligente que permita a los negocios proteger su inventario y optimizar la gestión de sus equipos de refrigeración, ofreciendo al mismo tiempo herramientas especializadas para mejorar la eficiencia operativa de los técnicos y proveedores del sector.',
         'vision_title': 'Visión',
         'vision_desc': 'Ser la empresa líder en gestión y mantenimiento de equipos de refrigeración, empezando por Lima y prontamente expandirnos a más lugares del Perú.',
+        // Video CTA Section
+        'video_cta_title': 'Ve OsitoPolar en Acción',
+        'video_cta_subtitle': 'Mira cómo funciona nuestro sistema inteligente de gestión de refrigeración y descubre por qué las empresas confían en nosotros para proteger su valioso inventario.',
+        'video_benefit_1': 'Resumen del producto en 3 minutos',
+        'video_benefit_2': 'Recorrido del dashboard en tiempo real',
+        'video_benefit_3': 'Historias de éxito de clientes',
+        'try_free_demo': 'Prueba Demo Gratis',
+        'request_consultation': 'Solicitar Consulta',
+        'video_title': 'OsitoPolar: Gestión Inteligente de Refrigeración',
+        'video_duration': 'Duración: 3:24',
 
         // How it works Section
         'how_it_works_title': '¿Cómo Funciona?',
@@ -200,7 +210,13 @@ const translations = {
         'accept': 'Aceptar',
         'decline': 'Rechazar',
         'back_to_top': 'Volver arriba',
-
+        // Team Video Component
+        'team_video_title': 'Conoce Nuestro Equipo',
+        'team_video_subtitle': 'Conoce a las personas detrás de OsitoPolar',
+        'play_team_video': 'Reproducir video de presentación del equipo',
+        'no_video_title': 'Video Próximamente',
+        'no_video_message': 'Estamos preparando un emocionante video de presentación del equipo. ¡Mantente atento!',
+        'back_to_photo': 'Volver a la Foto',
         // Form errors
         'error_name': 'Por favor, ingresa tu nombre',
         'error_email': 'Por favor, ingresa un email válido',
@@ -443,6 +459,43 @@ function addTranslationAttributes() {
             }
         }
     });
+    // Video CTA section
+    const videoCTATitle = document.querySelector('#video-demo .section-title');
+    if (videoCTATitle) videoCTATitle.setAttribute('data-i18n', 'video_cta_title');
+
+    const videoCTASubtitle = document.querySelector('.video-cta-content p');
+    if (videoCTASubtitle) videoCTASubtitle.setAttribute('data-i18n', 'video_cta_subtitle');
+
+// Video benefits
+    const videoBenefits = [
+        'video_benefit_1',
+        'video_benefit_2',
+        'video_benefit_3'
+    ];
+
+    document.querySelectorAll('.video-benefit span').forEach((benefit, index) => {
+        if (index < videoBenefits.length) {
+            benefit.setAttribute('data-i18n', videoBenefits[index]);
+        }
+    });
+
+// Video CTA buttons
+    document.querySelectorAll('.video-cta-buttons .btn').forEach(btn => {
+        const text = btn.textContent.trim();
+        if (text === 'Try Free Demo') {
+            btn.setAttribute('data-i18n', 'try_free_demo');
+        } else if (text === 'Request Consultation') {
+            btn.setAttribute('data-i18n', 'request_consultation');
+        }
+    });
+
+// Video info
+    const videoTitle = document.querySelector('.video-info h4');
+    if (videoTitle) videoTitle.setAttribute('data-i18n', 'video_title');
+
+    const videoDuration = document.querySelector('.video-info p');
+    if (videoDuration) videoDuration.setAttribute('data-i18n', 'video_duration');
+    
 
     // Benefits section
     const benefitsTitle = document.querySelector('#benefits .section-title');

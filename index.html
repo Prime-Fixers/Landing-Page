@@ -47,7 +47,7 @@
                 systems.</p>
             <div class="hero-cta">
                 <a href="https://osito-polar-v1.web.app/home" target="_blank" class="btn btn-primary btn-large">Try it now</a>
-                <a href="#como-funciona" class="btn btn-outline">How does it work?</a>
+                <a href="#how-it-works" class="btn btn-outline">How does it work?</a>
             </div>
         </div>
         <div class="hero-image">
@@ -218,7 +218,61 @@
         </div>
     </div>
 </section>
-
+<!-- Video CTA Section-->
+<section id="video-demo" class="video-cta">
+    <div class="container">
+        <div class="video-cta-content">
+            <div class="video-text">
+                <h2 class="section-title" data-i18n="video_cta_title">See OsitoPolar in Action</h2>
+                <p data-i18n="video_cta_subtitle">Watch how our smart refrigeration management system works and discover why businesses trust us to protect their valuable inventory.</p>
+                <div class="video-benefits">
+                    <div class="video-benefit">
+                        <i class="fas fa-play-circle"></i>
+                        <span data-i18n="video_benefit_1">Product overview</span>
+                    </div>
+                    <div class="video-benefit">
+                        <i class="fas fa-chart-line"></i>
+                        <span data-i18n="video_benefit_2">Real dashboard walkthrough</span>
+                    </div>
+                    <div class="video-benefit">
+                        <i class="fas fa-users"></i>
+                        <span data-i18n="video_benefit_3">Customer success stories</span>
+                    </div>
+                </div>
+                <div class="video-cta-buttons">
+                    <a href="https://osito-polar-v1.web.app/home" target="_blank" class="btn btn-primary btn-large" data-i18n="try_free_demo">Try it now</a>
+                    <a href="#demo" class="btn btn-outline" data-i18n="request_consultation">Request Consultation</a>
+                </div>
+            </div>
+            <div class="video-container">
+                <div class="video-placeholder" id="video-placeholder">
+                    <div class="video-thumbnail">
+                        <img src="" alt="OsitoPolar Demo Video Thumbnail" id="video-thumbnail-img">
+                        <div class="play-button" role="button" tabindex="0" aria-label="Play video">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <h4 data-i18n="video_title">OsitoPolar: Smart Refrigeration Management</h4>
+                        <p data-i18n="video_duration">Duration: 3:24</p>
+                    </div>
+                </div>
+                <!-- YouTube embed will replace placeholder when clicked -->
+                <div class="youtube-embed hidden" id="youtube-embed">
+                    <iframe
+                            width="560"
+                            height="315"
+                            src=""
+                            title="OsitoPolar Demo Video"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <!-- How it works Section -->
 <section id="how-it-works" class="how-it-works">
     <div class="container">
@@ -256,29 +310,64 @@
     </div>
 </section>
 
-<!--  About us Section -->
 <section id="about-us" class="about">
     <div class="container">
+        <h2 class="section-title" data-i18n="about_us_title">About Osito Polar</h2>
         <div class="about-content">
             <div class="about-text">
-                <h2 class="section-title">About Osito Polar</h2>
                 <div class="mission-vision">
                     <div class="mission">
-                        <h3>Mission</h3>
-                        <p>To provide an intelligent technological solution that allows businesses to protect their
-                            inventory and optimize the management of their refrigeration equipment, while offering
-                            specialized tools to improve the operational efficiency of technicians and suppliers in the
-                            sector.</p>
+                        <h3 data-i18n="mission_title">Mission</h3>
+                        <p data-i18n="mission_desc">To provide an intelligent technological solution that allows businesses to protect their inventory and optimize the management of their refrigeration equipment, while offering specialized tools to improve the operational efficiency of technicians and suppliers in the sector.</p>
                     </div>
                     <div class="vision">
-                        <h3>Vision</h3>
-                        <p>To be the leading company in refrigeration equipment management and maintenance, starting in
-                            Lima and soon expanding to more places in Peru.</p>
+                        <h3 data-i18n="vision_title">Vision</h3>
+                        <p data-i18n="vision_desc">To be the leading company in refrigeration equipment management and maintenance, starting in Lima and soon expanding to more places in Peru.</p>
                     </div>
                 </div>
             </div>
-            <div class="about-image">
-                <img src="./assets/images/OsitoPolar-Team.jpg" alt="Equipo de OsitoPolar">
+
+            <!-- Reusable Video Component for Team -->
+            <div class="about-media">
+                <div class="team-video-container">
+                    <div class="video-placeholder team-video" id="team-video-placeholder">
+                        <div class="video-thumbnail">
+                            <img src="./assets/images/OsitoPolar-Team.jpg" alt="OsitoPolar Team" id="team-video-thumbnail">
+                            <div class="play-button team-play-btn" role="button" tabindex="0" aria-label="Play team introduction video" data-i18n-attr="aria-label:play_team_video">
+                                <i class="fas fa-play"></i>
+                            </div>
+                            <div class="video-overlay">
+                                <div class="overlay-content">
+                                    <h4 data-i18n="team_video_title">Meet Our Team</h4>
+                                    <p data-i18n="team_video_subtitle">Get to know the people behind OsitoPolar</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- YouTube embed for team video -->
+                    <div class="youtube-embed hidden" id="team-youtube-embed">
+                        <iframe
+                                width="560"
+                                height="315"
+                                src=""
+                                title="OsitoPolar Team Introduction"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+
+                    <!-- Fallback when no video available -->
+                    <div class="no-video-message hidden" id="no-video-message">
+                        <div class="message-content">
+                            <i class="fas fa-video-slash"></i>
+                            <h4 data-i18n="no_video_title">Video Coming Soon</h4>
+                            <p data-i18n="no_video_message">We're preparing an exciting team introduction video. Stay tuned!</p>
+                            <button class="btn btn-outline btn-small" onclick="resetTeamVideo()" data-i18n="back_to_photo">Back to Photo</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

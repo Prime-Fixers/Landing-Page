@@ -505,37 +505,333 @@ nav {
 /* About Section */
 .about {
     padding: 80px 0;
+    background: linear-gradient(135deg, #ffffff 0%, var(--bg-light) 100%);
 }
 
 .about-content {
     display: flex;
-    align-items: center;
-    gap: 40px;
+    align-items: flex-start;
+    gap: 50px;
+    margin-top: 2rem;
 }
 
 .about-text {
     flex: 1;
+    min-width: 0; /* Prevents flex overflow */
 }
 
 .mission-vision {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 35px;
+}
+
+.mission, .vision {
+    padding: 25px;
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    border-left: 4px solid var(--primary-color);
+    transition: var(--transition);
+}
+
+.mission:hover, .vision:hover {
+    transform: translateX(5px);
+    box-shadow: var(--shadow-large);
 }
 
 .mission h3, .vision h3 {
     color: var(--primary-color);
     margin-bottom: 15px;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-.about-image {
+.mission h3::before {
+    content: '\f140'; /* Font Awesome target icon */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+
+.vision h3::before {
+    content: '\f06e';
+    font-family: 'Font Awesome 6 Free', serif;
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+
+.mission p, .vision p {
+    color: var(--text-light);
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* About Media - Video Component */
+.about-media {
     flex: 1;
+    min-width: 0;
 }
 
-.about-image img {
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
+.team-video-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.team-video {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    cursor: pointer;
+    transition: var(--transition);
+    position: relative;
+    aspect-ratio: 16/10; /* Maintains consistent proportions */
+}
+
+.team-video:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.team-video .video-thumbnail {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.team-video .video-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.team-video:hover .video-thumbnail img {
+    transform: scale(1.05);
+}
+
+.video-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: white;
+    padding: 25px 20px 20px;
+    transform: translateY(100%);
+    transition: var(--transition);
+}
+
+.team-video:hover .video-overlay {
+    transform: translateY(0);
+}
+
+.overlay-content h4 {
+    margin: 0 0 5px 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.overlay-content p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.team-play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background: rgba(0, 120, 215, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+    border: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+.team-play-btn:hover {
+    background: var(--primary-color);
+    transform: translate(-50%, -50%) scale(1.15);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.team-play-btn i {
+    color: white;
+    font-size: 1.8rem;
+    margin-left: 4px; /* Visual centering */
+}
+
+/* YouTube embed for team */
+.team-video-container .youtube-embed {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/10;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.team-video-container .youtube-embed iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/* No video message */
+.no-video-message {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    padding: 40px 20px;
+    text-align: center;
+    aspect-ratio: 16/10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.message-content i {
+    font-size: 3rem;
+    color: var(--text-lighter);
+    margin-bottom: 15px;
+}
+
+.message-content h4 {
+    color: var(--text-color);
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.message-content p {
+    color: var(--text-light);
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.btn-small {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+}
+
+/* Loading state for team video */
+.team-video.video-loading {
+    pointer-events: none;
+}
+
+.team-video.video-loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    z-index: 10;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .about-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .about-text {
+        order: 2;
+    }
+
+    .about-media {
+        order: 1;
+    }
+
+    .team-video-container {
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about {
+        padding: 60px 0;
+    }
+
+    .mission-vision {
+        gap: 25px;
+    }
+
+    .mission, .vision {
+        padding: 20px;
+    }
+
+    .team-play-btn {
+        width: 70px;
+        height: 70px;
+    }
+
+    .team-play-btn i {
+        font-size: 1.5rem;
+    }
+
+    .video-overlay {
+        padding: 20px 15px 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .about-content {
+        gap: 30px;
+    }
+
+    .mission h3, .vision h3 {
+        font-size: 1.2rem;
+    }
+
+    .team-play-btn {
+        width: 60px;
+        height: 60px;
+    }
+
+    .team-play-btn i {
+        font-size: 1.3rem;
+    }
+
+    .no-video-message {
+        padding: 30px 15px;
+    }
+
+    .message-content i {
+        font-size: 2.5rem;
+    }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+    .team-video,
+    .team-play-btn,
+    .video-overlay,
+    .mission,
+    .vision {
+        transition: none;
+    }
+
+    .team-video:hover .video-thumbnail img {
+        transform: none;
+    }
 }
 
 /* Testimonials Section */
@@ -1282,4 +1578,286 @@ footer {
         background-color: rgba(26, 43, 71, 0.8); /* Darker background for iOS */
         border-color: rgba(255, 255, 255, 0.3); /* More visible border */
     }
+}
+.video-cta {
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--bg-light) 0%, white 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.video-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23e0e7ff" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    opacity: 0.5;
+    z-index: 0;
+}
+
+.video-cta-content {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    position: relative;
+    z-index: 1;
+}
+
+.video-text {
+    flex: 1;
+}
+
+.video-text .section-title {
+    text-align: left;
+    margin-bottom: 1.5rem;
+    font-size: 2.8rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.video-text .section-title::after {
+    left: 0;
+    transform: none;
+}
+
+.video-text p {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.video-benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 2.5rem;
+}
+
+.video-benefit {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 0;
+}
+
+.video-benefit i {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    width: 20px;
+}
+
+.video-benefit span {
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.video-cta-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.video-container {
+    flex: 1;
+    position: relative;
+    max-width: 500px;
+}
+
+.video-placeholder {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    cursor: pointer;
+    transition: var(--transition);
+    position: relative;
+}
+
+.video-placeholder:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.video-thumbnail {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    background: linear-gradient(45deg, var(--primary-light), var(--bg-light));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.video-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70px;
+    height: 70px;
+    background: rgba(0, 120, 215, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+}
+
+.play-button:hover {
+    background: var(--primary-color);
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.play-button i {
+    color: white;
+    font-size: 1.5rem;
+    margin-left: 3px; /* Visual centering adjustment */
+}
+
+.video-info {
+    padding: 20px;
+}
+
+.video-info h4 {
+    color: var(--text-color);
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+.video-info p {
+    color: var(--text-lighter);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.youtube-embed {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.youtube-embed iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .video-cta-content {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .video-text .section-title {
+        text-align: center;
+    }
+
+    .video-text .section-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .video-container {
+        max-width: 600px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .video-cta {
+        padding: 60px 0;
+    }
+
+    .video-text .section-title {
+        font-size: 2.2rem;
+    }
+
+    .video-text p {
+        font-size: 1.1rem;
+    }
+
+    .video-cta-buttons {
+        justify-content: center;
+    }
+
+    .video-thumbnail {
+        height: 220px;
+    }
+
+    .play-button {
+        width: 60px;
+        height: 60px;
+    }
+
+    .play-button i {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .video-cta-content {
+        gap: 30px;
+    }
+
+    .video-text .section-title {
+        font-size: 2rem;
+    }
+
+    .video-cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .video-cta-buttons .btn {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .video-benefits {
+        align-items: center;
+    }
+}
+
+/* Loading state */
+.video-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 350px;
+    background: var(--bg-light);
+    border-radius: 12px;
+}
+
+.video-loading::after {
+    content: '';
+    width: 40px;
+    height: 40px;
+    border: 4px solid var(--border-color);
+    border-top: 4px solid var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
