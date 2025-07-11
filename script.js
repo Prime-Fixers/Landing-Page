@@ -23,7 +23,7 @@ const VIDEO_CONFIG = {
         iframe: 'youtube-embed'
     },
     team: {
-        youtubeId: 'MNpWOLxXjDc', // Add your team video ID here when available
+        youtubeId: 'TFbd0T1vjBc', // Add your team video ID here when available
         placeholder: 'team-video-placeholder',
         iframe: 'team-youtube-embed',
         fallback: 'no-video-message'
