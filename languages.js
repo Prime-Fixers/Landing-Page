@@ -17,7 +17,7 @@ const translations = {
         'trust_us': 'Confían en nosotros:',
 
         // For whom Section
-        'for_whom': '¿Para quién es OsitoPolar?',
+        'for_whom': '¿Para quién es Frostlink?',
         'businesses_cold': 'Negocios con Equipos de Frío',
         'businesses_desc': 'Supermercados, minimarkets, laboratorios, restaurantes y empresas del sector alimentario o farmacéutico.',
         'technicians': 'Técnicos Especializados',
@@ -56,20 +56,20 @@ const translations = {
         'benefit5_technicians': 'Nuevas oportunidades de negocio',
 
         // About us Section
-        'about_us_title': 'Sobre OsitoPolar',
+        'about_us_title': 'Sobre Frostlink',
         'mission_title': 'Misión',
         'mission_desc': 'Proporcionar una solución tecnológica inteligente que permita a los negocios proteger su inventario y optimizar la gestión de sus equipos de refrigeración, ofreciendo al mismo tiempo herramientas especializadas para mejorar la eficiencia operativa de los técnicos y proveedores del sector.',
         'vision_title': 'Visión',
         'vision_desc': 'Ser la empresa líder en gestión y mantenimiento de equipos de refrigeración, empezando por Lima y prontamente expandirnos a más lugares del Perú.',
         // Video CTA Section
-        'video_cta_title': 'Ve OsitoPolar en Acción',
+        'video_cta_title': 'Ve Frostlink en Acción',
         'video_cta_subtitle': 'Mira cómo funciona nuestro sistema inteligente de gestión de refrigeración y descubre por qué las empresas confían en nosotros para proteger su valioso inventario.',
         'video_benefit_1': 'Resumen del producto en 3 minutos',
         'video_benefit_2': 'Recorrido del dashboard en tiempo real',
         'video_benefit_3': 'Historias de éxito de clientes',
         'try_free_demo': 'Prueba Demo Gratis',
         'request_consultation': 'Solicitar Consulta',
-        'video_title': 'OsitoPolar: Gestión Inteligente de Refrigeración',
+        'video_title': 'Frostlink: Gestión Inteligente de Refrigeración',
         'video_duration': 'Duración: 3:24',
 
         // How it works Section
@@ -88,15 +88,15 @@ const translations = {
         'pricing_tab_providers':     'Para Proveedores',
 
 // Plan Titles - Users
-        'plan_basic_title':          'Básico (Osito Polar)',
+        'plan_basic_title':          'Básico (Frost)',
         'plan_basic_price':          'S/. 69.99 (USD $18.99)/mes',
         'plan_basic_subtitle':       'Hasta 3 equipos',
 
-        'plan_standard_title':       'Estándar (Osito Nevado)',
+        'plan_standard_title':       'Estándar (Ice)',
         'plan_standard_price':       'S/. 129.99 (USD $35.13)/mes',
         'plan_standard_subtitle':    'Hasta 8 equipos',
 
-        'plan_premium_title':        'Premium (Osito Glacial)',
+        'plan_premium_title':        'Premium (Glacier)',
         'plan_premium_price':        'S/. 249.99 (USD $67.56)/mes',
         'plan_premium_subtitle':     'Hasta 20 equipos',
 
@@ -157,8 +157,8 @@ const translations = {
         // Testimonials Section
         'testimonials_title': 'Lo que dicen nuestros clientes',
 
-        'testimonial_1': '"Desde que implementamos OsitoPolar, hemos reducido las pérdidas por fallas en nuestros equipos de refrigeración en un 40%. El sistema de alertas nos ha salvado varias veces de perder inventario valioso."',
-        'testimonial_2': '"Como técnico especializado, OsitoPolar ha revolucionado mi forma de trabajar con mi Empresa. Ahora puedo ver el historial completo de cada equipo antes de visitarlo y generar informes profesionales en minutos."',
+        'testimonial_1': '"Desde que implementamos Frostlink, hemos reducido las pérdidas por fallas en nuestros equipos de refrigeración en un 40%. El sistema de alertas nos ha salvado varias veces de perder inventario valioso."',
+        'testimonial_2': '"Como técnico especializado, Frostlink ha revolucionado mi forma de trabajar con mi Empresa. Ahora puedo ver el historial completo de cada equipo antes de visitarlo y generar informes profesionales en minutos."',
         'testimonial_3': '"La tranquilidad que proporciona saber que nuestros equipos están siendo monitoreados 24/7 no tiene precio. Además, hemos notado ahorros significativos en nuestro consumo de electricidad gracias a las recomendaciones del sistema."',
 
         'testimonial_position_1': 'Gerente de Operaciones, Supermercados ABC',
@@ -169,7 +169,7 @@ const translations = {
         'next_testimonial': 'Siguiente testimonio',
         // CTA Section
         'cta_title': '¿Listo para optimizar la gestión de tus equipos de refrigeración?',
-        'cta_subtitle': 'Solicita una demostración gratuita y descubre cómo OsitoPolar puede transformar tu negocio.',
+        'cta_subtitle': 'Solicita una demostración gratuita y descubre cómo Frostlink puede transformar tu negocio.',
         'full_name': 'Nombre completo',
         'email': 'Correo electrónico',
         'phone': 'Teléfono',
@@ -212,7 +212,7 @@ const translations = {
         'back_to_top': 'Volver arriba',
         // Team Video Component
         'team_video_title': 'Conoce Nuestro Equipo',
-        'team_video_subtitle': 'Conoce a las personas detrás de OsitoPolar',
+        'team_video_subtitle': 'Conoce a las personas detrás de Frostlink',
         'play_team_video': 'Reproducir video de presentación del equipo',
         'no_video_title': 'Video Próximamente',
         'no_video_message': 'Estamos preparando un emocionante video de presentación del equipo. ¡Mantente atento!',
@@ -826,7 +826,7 @@ function addTranslationAttributes() {
         const yearMatch = copyright.textContent.match(/\d{4}/);
         if (yearMatch) {
             const year = yearMatch[0];
-            copyright.innerHTML = `&copy; ${year} OsitoPolar. <span data-i18n="rights_reserved">All rights reserved.</span>`;
+            copyright.innerHTML = `&copy; ${year} Frostlink. <span data-i18n="rights_reserved">All rights reserved.</span>`;
         }
     }
 

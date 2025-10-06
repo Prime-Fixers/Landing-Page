@@ -15,118 +15,11 @@
     });
 }
 
-// Video configuration
-const VIDEO_CONFIG = {
-    main: {
-        youtubeId: 'NcfqZRuRflI', // Your main demo video ID
-        placeholder: 'video-placeholder',
-        iframe: 'youtube-embed'
-    },
-    team: {
-        youtubeId: 'TFbd0T1vjBc', // Add your team video ID here when available
-        placeholder: 'team-video-placeholder',
-        iframe: 'team-youtube-embed',
-        fallback: 'no-video-message'
-    }
-};
-
-// Initialize video functionality
-function initializeVideos() {
-    // Main demo video
-    const mainVideoPlaceholder = document.getElementById(VIDEO_CONFIG.main.placeholder);
-    if (mainVideoPlaceholder) {
-        const playButton = mainVideoPlaceholder.querySelector('.play-button');
-        if (playButton) {
-            playButton.addEventListener('click', () => playVideo('main'));
-            // Also make the entire placeholder clickable
-            mainVideoPlaceholder.addEventListener('click', () => playVideo('main'));
-        }
-    }
-
-    // Team video
-    const teamVideoPlaceholder = document.getElementById(VIDEO_CONFIG.team.placeholder);
-    if (teamVideoPlaceholder) {
-        const teamPlayButton = teamVideoPlaceholder.querySelector('.team-play-btn');
-        if (teamPlayButton) {
-            teamPlayButton.addEventListener('click', (e) => {
-                e.stopPropagation();
-                playVideo('team');
-            });
-            // Also make the entire placeholder clickable
-            teamVideoPlaceholder.addEventListener('click', () => playVideo('team'));
-        }
-    }
-}
-
-// Play video function
-function playVideo(videoType) {
-    const config = VIDEO_CONFIG[videoType];
-
-    if (!config) {
-        console.error('Invalid video type:', videoType);
-        return;
-    }
-
-    const placeholder = document.getElementById(config.placeholder);
-    const iframe = document.getElementById(config.iframe);
-
-    if (!placeholder || !iframe) {
-        console.error('Video elements not found for type:', videoType);
-        return;
-    }
-
-    // Check if we have a video ID
-    if (!config.youtubeId) {
-        // Show fallback message for team video if no video available
-        if (videoType === 'team' && config.fallback) {
-            const fallbackElement = document.getElementById(config.fallback);
-            if (fallbackElement) {
-                placeholder.classList.add('hidden');
-                fallbackElement.classList.remove('hidden');
-            }
-        }
-        return;
-    }
-
-    // Add loading state
-    placeholder.classList.add('video-loading');
-
-    // Set the YouTube embed URL
-    const embedUrl = `https://www.youtube.com/embed/${config.youtubeId}?autoplay=1&rel=0`;
-    const iframeElement = iframe.querySelector('iframe');
-
-    if (iframeElement) {
-        iframeElement.src = embedUrl;
-
-        // Wait a moment then switch to video
-        setTimeout(() => {
-            placeholder.classList.add('hidden');
-            iframe.classList.remove('hidden');
-            placeholder.classList.remove('video-loading');
-        }, 500);
-    }
-}
-
-// Reset team video to photo
-function resetTeamVideo() {
-    const config = VIDEO_CONFIG.team;
-    const placeholder = document.getElementById(config.placeholder);
-    const iframe = document.getElementById(config.iframe);
-    const fallback = document.getElementById(config.fallback);
-
-    if (placeholder) placeholder.classList.remove('hidden');
-    if (iframe) {
-        iframe.classList.add('hidden');
-        const iframeElement = iframe.querySelector('iframe');
-        if (iframeElement) iframeElement.src = '';
-    }
-    if (fallback) fallback.classList.add('hidden');
-}
-
-// Make resetTeamVideo available globally for the button
-window.resetTeamVideo = resetTeamVideo;
+// Video functionality removed
 
 document.addEventListener('DOMContentLoaded', async function () {
+    console.log("DOM fully loaded");
+    
     try {
         await loadLanguageScript();
         // Only initialize language after script is loaded
@@ -197,7 +90,7 @@ document.addEventListener('DOMContentLoaded', async function () {
             spans[2].style.transform = 'none';
         }
     });
-
+    
     // Tabs functionality
     const tabBtns = document.querySelectorAll('.tab-btn');
     const tabContents = document.querySelectorAll('.tab-content');
@@ -413,13 +306,9 @@ document.addEventListener('DOMContentLoaded', async function () {
         if (!img.src || img.src === window.location.href) {
             const width = img.width || 300;
             const height = img.height || 200;
-            img.src = `https://via.placeholder.com/${width}x${height}/0078d7/FFFFFF?text=OsitoPolar`;
+            img.src = `https://via.placeholder.com/${width}x${height}/0078d7/FFFFFF?text=Frostlink`;
         }
     });
 
-    // Initialize videos after all other initialization
-    setTimeout(() => {
-        initializeVideos();
-        console.log('Video functionality initialized');
-    }, 100);
+    // Video functionality removed
 });
