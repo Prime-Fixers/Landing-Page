@@ -1,16 +1,16 @@
 /* Base Styles */
 :root {
-    --primary-color: #2980b9;
-    --primary-dark: #1b557a;
-    --primary-light: #e8f4fd;
+    --primary-color: #0078D7;
+    --primary-dark: #1A2B47;
+    --primary-light: #ffffff;
     --secondary-color: #27ae60;
     --accent-color: #e74c3c;
     --text-color: #2c3e50;
     --text-light: #7f8c8d;
     --text-lighter: #95a5a6;
     --bg-color: #ffffff;
-    --bg-light: #ecf0f1;
-    --bg-dark: #34495e;
+    --bg-light: #F5F9FF;
+    --bg-dark: #1A2B47;
     --border-color: #bdc3c7;
     --success-color: #4caf50;
     --error-color: #f44336;
