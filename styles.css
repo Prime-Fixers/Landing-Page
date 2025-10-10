@@ -280,18 +280,31 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 40px;
+    gap: 60px;
     flex-wrap: wrap;
+    padding: 0 20px;
 }
 
 .client-logos img {
-    height: 40px;
-    opacity: 0.7;
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+    opacity: 0.8;
     transition: var(--transition);
+    filter: grayscale(0%);
 }
 
 .client-logos img:hover {
     opacity: 1;
+    transform: scale(1.05);
+}
+
+.client-logos .logo-small {
+    height: 38px;
+}
+
+.client-logos .logo-large {
+    height: 58px;
 }
 
 /* For whom Section */
